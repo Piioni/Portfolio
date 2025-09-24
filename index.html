@@ -4,49 +4,169 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Piioni</title>
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <nav>
-      <div class="links">
-        <div class="logo">
-          <img src="logo.png" alt="Logo" />
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-left">
+          <div class="logo">
+            <img src="logo.png" alt="Logo" />
+          </div>
+          <div class="menu">
+            <ul>
+              <li><a href="#index">Home</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#blog">Blog</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="menu">
-          <ul>
-            <li><a href="#index">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#blog">Blog</a></li>
-          </ul>
+        <div class="nav-right">
+          <button class="theme-toggle">⚙️</button>
         </div>
       </div>
     </nav>
 
     <section class="hero">
-      <div class="left-hero">
-        <div class="welcome">
-          <p>Welcome to my portfolio!</p>
+      <div class="hero-container">
+        <div class="left-hero">
+          <div class="welcome-bubble">
+            <p>Welcome to my portfolio!</p>
+          </div>
+          <div class="hero-content">
+            <h1>Hey!, I'm Piioni</h1>
+            <p>Passionate software developer and tech enthusiast.</p>
+          </div>
         </div>
-        <div class="hero-content">
-          <h1>Hi!, I'm Piioni</h1>
-          <p>Passionate software developer and tech enthusiast.</p>
+        <div class="right-hero">
+          <img src="hero-image.png" alt="Hero Image" />
         </div>
-      </div>
-      <div class="right-hero">
-        <img src="hero-image.png" alt="Hero Image" />
       </div>
     </section>
 
-    <main>
+    <section class="about">
       <div class="container">
-        <div class="about-me">
-          <h2>About Me</h2>
+        <div class="about-content">
+          <div class="about-me">
+            <h2>About Me</h2>
+            <p>
+              I am a software developer with a passion for creating innovative
+              solutions. I specialize in web development and have experience with
+              various programming languages and frameworks.
+            </p>
+          </div>
+          <div class="github-graph">
+            <h2>GitHub Activity</h2>
+            <img src="https://ghchart.rshah.org/Piioni" alt="GitHub Chart" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="work-section">
+      <div class="container">
+        <div class="work-header">
+          <h2>Projects</h2>
           <p>
-            I am a software developer with a passion for creating innovative
-            solutions. I specialize in web development and have experience with
-            various programming languages and frameworks.
+            Building user-friendly web applications and exploring new
+            technologies.
           </p>
+        </div>
+        <div class="work-content">
+          <div class="work-options">
+            <button class="option-btn active">Projects</button>
+            <button class="option-btn">Achievements</button>
+            <button class="option-btn">Hobbies</button>
+          </div>
+          <div class="work-cards">
+            <!-- Cards will be populated dynamically -->
+          </div>
         </div>
       </div>
     </main>
+
+    <section class="technologies">
+      <div class="container">
+        <h2>Technologies I Work With</h2>
+        <div class="tech-grid">
+          <a href="#" class="tech-item">Arch</a>
+          <a href="#" class="tech-item">Java</a>
+          <a href="#" class="tech-item">Python</a>
+          <a href="#" class="tech-item">PHP</a>
+          <a href="#" class="tech-item">JavaScript</a>
+          <a href="#" class="tech-item">HTML</a>
+          <a href="#" class="tech-item">CSS</a>
+          <a href="#" class="tech-item">Docker</a>
+          <a href="#" class="tech-item">IntelliJ</a>
+          <a href="#" class="tech-item">MySQL</a>
+          <a href="#" class="tech-item">Maven</a>
+          <a href="#" class="tech-item">Spring</a>
+          <a href="#" class="tech-item">Symfony</a>
+          <a href="#" class="tech-item">Windows</a>
+          <a href="#" class="tech-item">Linux</a>
+          <a href="#" class="tech-item">macOS</a>
+          <a href="#" class="tech-item">VS Code</a>
+          <a href="#" class="tech-item">AWS</a>
+          <a href="#" class="tech-item">GitHub</a>
+          <a href="#" class="tech-item">Obsidian</a>
+          <a href="#" class="tech-item">HTMX</a>
+          <a href="#" class="tech-item">Markdown</a>
+          <a href="#" class="tech-item">Notion</a>
+          <a href="#" class="tech-item">LinkedIn</a>
+          <a href="#" class="tech-item">Discord</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+        <div class="contact-content">
+          <div class="contact-left">
+            <h2>Ready to build something great?</h2>
+            <p>
+              I'm actively seeking new opportunities and exciting projects. 
+              Let's collaborate and create something amazing together!
+            </p>
+          </div>
+          <div class="contact-right">
+            <div class="social-links">
+              <a href="#" class="social-card">LinkedIn</a>
+              <a href="#" class="social-card">GitHub</a>
+              <a href="#" class="social-card">Email</a>
+              <a href="#" class="social-card">Website</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-left">
+            <h3>Piioni</h3>
+            <p>I'm passionate about building innovative digital experiences.</p>
+          </div>
+          <div class="footer-right">
+            <div class="terminal">
+              <div class="terminal-header">
+                <div class="terminal-buttons">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="terminal-body">
+                <p>$status --check</p>
+                <p>> ready to build something amazing<span class="cursor">_</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Piioni. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

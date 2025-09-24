@@ -1,0 +1,156 @@
+/* Layout & Sections */
+
+/* Navigation */
+.navbar {
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo img {
+  height: 2.5rem;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.menu a:hover {
+  color: var(--accent-color);
+}
+
+/* Grid Layouts */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* Flex Layouts */
+.hero-container,
+.about-content,
+.contact-content,
+.footer-content {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.hero-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+  align-items: center;
+}
+
+.contact-content {
+  align-items: center;
+}
+
+.footer-content {
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.left-hero,
+.about-me, 
+.github-graph,
+.contact-left,
+.contact-right,
+.footer-left {
+  flex: 1;
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.work-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.work-cards {
+  min-height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .nav-container {
+    padding: 0 1rem;
+  }
+  
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .contact-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .footer-right {
+    justify-content: center;
+  }
+  
+  .tech-grid {
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  }
+}

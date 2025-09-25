@@ -1,6 +1,26 @@
-@import url('./normalize.css');
-@import url('./variables.css');
 @import url('./base.css');
-@import url('./components.css');
-@import url('./layout.css');
-@import url('./main.css');
+@import url('./components/navbar.css');
+@import url('./components/hero.css');
+@import url('./components/work.css');
+@import url('./components/technologies.css');
+@import url('./components/contact.css');
+@import url('./components/footer.css');
+
+:root {
+  --bg-color: #faf9f6;
+  --nav-bg: #f5f3f0;
+  --footer-bg: #2a2a2a;
+  --text-color: #2c2c2c;
+  --text-muted: #6b7280;
+  --accent-primary: #5a67d8;
+  --accent-secondary: #fa709a;
+  --accent-tertiary: #c084fc;
+  --hover-color: rgba(0, 0, 0, 0.05);
+  --bubble-bg: rgba(90, 103, 216, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.6);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --terminal-bg: #1a1a1a;
+  --terminal-text: #00ff00;
+  
+  --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}

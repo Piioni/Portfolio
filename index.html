@@ -6,6 +6,7 @@
     <title>Piioni</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
     <nav class="navbar">
       <div class="nav-container">
@@ -31,34 +32,18 @@
       <div class="hero-container">
         <div class="left-hero">
           <div class="welcome-bubble">
+            <span>🚀</span>
             <p>Welcome to my portfolio!</p>
           </div>
           <div class="hero-content">
-            <h1>Hey!, I'm Piioni</h1>
+            <h1 class="animated-text">
+              Hey!, I'm <span class="typing-text">a developer</span>
+            </h1>
             <p>Passionate software developer and tech enthusiast.</p>
           </div>
         </div>
         <div class="right-hero">
           <img src="hero-image.png" alt="Hero Image" />
-        </div>
-      </div>
-    </section>
-
-    <section class="about">
-      <div class="container">
-        <div class="about-content">
-          <div class="about-me">
-            <h2>About Me</h2>
-            <p>
-              I am a software developer with a passion for creating innovative
-              solutions. I specialize in web development and have experience with
-              various programming languages and frameworks.
-            </p>
-          </div>
-          <div class="github-graph">
-            <h2>GitHub Activity</h2>
-            <img src="https://ghchart.rshah.org/Piioni" alt="GitHub Chart" />
-          </div>
         </div>
       </div>
     </section>
@@ -88,32 +73,170 @@
     <section class="technologies">
       <div class="container">
         <h2>Technologies I Work With</h2>
+        <div class="tech-options">
+          <button class="tech-option-btn active" data-category="all">
+            All
+          </button>
+          <button class="tech-option-btn" data-category="languages">
+            Languages
+          </button>
+          <button class="tech-option-btn" data-category="tools">Tools</button>
+          <button class="tech-option-btn" data-category="frontend">
+            Frontend
+          </button>
+          <button class="tech-option-btn" data-category="backend">
+            Backend
+          </button>
+        </div>
         <div class="tech-grid">
-          <a href="#" class="tech-item">Arch</a>
-          <a href="#" class="tech-item">Java</a>
-          <a href="#" class="tech-item">Python</a>
-          <a href="#" class="tech-item">PHP</a>
-          <a href="#" class="tech-item">JavaScript</a>
-          <a href="#" class="tech-item">HTML</a>
-          <a href="#" class="tech-item">CSS</a>
-          <a href="#" class="tech-item">Docker</a>
-          <a href="#" class="tech-item">IntelliJ</a>
-          <a href="#" class="tech-item">MySQL</a>
-          <a href="#" class="tech-item">Maven</a>
-          <a href="#" class="tech-item">Spring</a>
-          <a href="#" class="tech-item">Symfony</a>
-          <a href="#" class="tech-item">Windows</a>
-          <a href="#" class="tech-item">Linux</a>
-          <a href="#" class="tech-item">macOS</a>
-          <a href="#" class="tech-item">VS Code</a>
-          <a href="#" class="tech-item">AWS</a>
-          <a href="#" class="tech-item">GitHub</a>
-          <a href="#" class="tech-item">Obsidian</a>
-          <a href="#" class="tech-item">HTMX</a>
-          <a href="#" class="tech-item">Markdown</a>
-          <a href="#" class="tech-item">Notion</a>
-          <a href="#" class="tech-item">LinkedIn</a>
-          <a href="#" class="tech-item">Discord</a>
+          <a
+            href="https://www.java.com/"
+            class="tech-item"
+            data-category="languages"
+          >
+            <span class="tech-icon">☕</span>
+            <span>Java</span>
+          </a>
+          <a
+            href="https://www.python.org/"
+            class="tech-item"
+            data-category="languages"
+          >
+            <span class="tech-icon">🐍</span>
+            <span>Python</span>
+          </a>
+          <a
+            href="https://www.php.net/"
+            class="tech-item"
+            data-category="languages"
+          >
+            <span class="tech-icon">🐘</span>
+            <span>PHP</span>
+          </a>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            class="tech-item"
+            data-category="languages frontend"
+          >
+            <span class="tech-icon">🟨</span>
+            <span>JavaScript</span>
+          </a>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+            class="tech-item"
+            data-category="frontend"
+          >
+            <span class="tech-icon">🌐</span>
+            <span>HTML</span>
+          </a>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+            class="tech-item"
+            data-category="frontend"
+          >
+            <span class="tech-icon">🎨</span>
+            <span>CSS</span>
+          </a>
+          <a
+            href="https://htmx.org/"
+            class="tech-item"
+            data-category="frontend"
+          >
+            <span class="tech-icon">⚡</span>
+            <span>HTMX</span>
+          </a>
+          <a
+            href="https://spring.io/"
+            class="tech-item"
+            data-category="backend"
+          >
+            <span class="tech-icon">🍃</span>
+            <span>Spring</span>
+          </a>
+          <a
+            href="https://symfony.com/"
+            class="tech-item"
+            data-category="backend"
+          >
+            <span class="tech-icon">🎼</span>
+            <span>Symfony</span>
+          </a>
+          <a
+            href="https://www.mysql.com/"
+            class="tech-item"
+            data-category="backend"
+          >
+            <span class="tech-icon">🗄️</span>
+            <span>MySQL</span>
+          </a>
+          <a
+            href="https://www.docker.com/"
+            class="tech-item"
+            data-category="tools"
+          >
+            <span class="tech-icon">🐳</span>
+            <span>Docker</span>
+          </a>
+          <a
+            href="https://www.jetbrains.com/idea/"
+            class="tech-item"
+            data-category="tools"
+          >
+            <span class="tech-icon">💡</span>
+            <span>IntelliJ</span>
+          </a>
+          <a
+            href="https://code.visualstudio.com/"
+            class="tech-item"
+            data-category="tools"
+          >
+            <span class="tech-icon">💻</span>
+            <span>VS Code</span>
+          </a>
+          <a
+            href="https://maven.apache.org/"
+            class="tech-item"
+            data-category="tools"
+          >
+            <span class="tech-icon">📦</span>
+            <span>Maven</span>
+          </a>
+          <a
+            href="https://archlinux.org/"
+            class="tech-item"
+            data-category="tools"
+          >
+            <span class="tech-icon">🏛️</span>
+            <span>Arch</span>
+          </a>
+          <a
+            href="https://aws.amazon.com/"
+            class="tech-item"
+            data-category="tools"
+          >
+            <span class="tech-icon">☁️</span>
+            <span>AWS</span>
+          </a>
+          <a href="https://github.com/" class="tech-item" data-category="tools">
+            <span class="tech-icon">🐙</span>
+            <span>GitHub</span>
+          </a>
+          <a
+            href="https://obsidian.md/"
+            class="tech-item"
+            data-category="tools"
+          >
+            <span class="tech-icon">🔮</span>
+            <span>Obsidian</span>
+          </a>
+          <a
+            href="https://www.notion.so/"
+            class="tech-item"
+            data-category="tools"
+          >
+            <span class="tech-icon">📋</span>
+            <span>Notion</span>
+          </a>
         </div>
       </div>
     </section>
@@ -124,49 +247,84 @@
           <div class="contact-left">
             <h2>Ready to build something great?</h2>
             <p>
-              I'm actively seeking new opportunities and exciting projects. 
+              I'm actively seeking new opportunities and exciting projects.
               Let's collaborate and create something amazing together!
             </p>
           </div>
           <div class="contact-right">
             <div class="social-links">
-              <a href="#" class="social-card">LinkedIn</a>
-              <a href="#" class="social-card">GitHub</a>
-              <a href="#" class="social-card">Email</a>
-              <a href="#" class="social-card">Website</a>
+              <a href="#" class="social-card">
+                <span class="social-icon">💼</span>
+                <span>LinkedIn</span>
+              </a>
+              <a href="#" class="social-card">
+                <span class="social-icon">🐙</span>
+                <span>GitHub</span>
+              </a>
+              <a href="#" class="social-card">
+                <span class="social-icon">📧</span>
+                <span>Email</span>
+              </a>
+              <a href="#" class="social-card">
+                <span class="social-icon">🌐</span>
+                <span>Website</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
-  
+
     <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-left">
-            <h3>Piioni</h3>
-            <p>I'm passionate about building innovative digital experiences.</p>
-          </div>
-          <div class="footer-right">
-            <div class="terminal">
-              <div class="terminal-header">
-                <div class="terminal-buttons">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
+      <div class="footer-content">
+        <div class="footer-left">
+          <h3>Piioni</h3>
+          <p>I'm passionate about building innovative digital experiences.</p>
+        </div>
+        <div class="footer-right">
+          <div class="terminal">
+            <div class="terminal-header">
+              <div class="terminal-buttons">
+                <span class="btn-close"></span>
+                <span class="btn-minimize"></span>
+                <span class="btn-maximize"></span>
               </div>
-              <div class="terminal-body">
-                <p>$status --check</p>
-                <p>> ready to build something amazing<span class="cursor">_</span></p>
-              </div>
+            </div>
+            <div class="terminal-body">
+              <p class="terminal-line">$status --check</p>
+              <p class="terminal-line">
+                > ready to build something amazing<span class="cursor">_</span>
+              </p>
             </div>
           </div>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2024 Piioni. All rights reserved.</p>
-        </div>
       </div>
     </footer>
+
+    <script>
+      // Technology filter functionality
+      const techBtns = document.querySelectorAll(".tech-option-btn");
+      const techItems = document.querySelectorAll(".tech-item");
+
+      techBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          techBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const category = btn.dataset.category;
+
+          techItems.forEach((item) => {
+            if (
+              category === "all" ||
+              item.dataset.category.includes(category)
+            ) {
+              item.style.display = "flex";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

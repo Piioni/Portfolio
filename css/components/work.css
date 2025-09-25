@@ -1,0 +1,45 @@
+.work-section {
+  padding: 4rem 0;
+}
+
+.work-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.work-header p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.work-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.option-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 2rem;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+  font-family: var(--font-geist-mono);
+}
+
+.option-btn:hover,
+.option-btn.active {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .work-options {
+    flex-wrap: wrap;
+  }
+}

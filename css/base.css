@@ -22,7 +22,9 @@ body {
 }
 
 /* Typography hierarchy */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
@@ -33,7 +35,11 @@ h1 {
 
 h2 {
   font-size: 1.8rem;
-  background: linear-gradient(135deg, var(--text-color) 0%, var(--accent-primary) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--text-color) 0%,
+    var(--accent-primary) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -60,9 +66,6 @@ p {
   }
 
   h2 {
-    font-size: 2rem;
-  }
-}
     font-size: 2rem;
   }
 }

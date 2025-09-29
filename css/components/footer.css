@@ -1,8 +1,8 @@
 .footer {
   padding: 4rem 0 2rem;
   background-color: var(--footer-bg);
-  border-top: 1px solid var(--border-color);
-  color: #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--english-walnut-100);
 }
 
 .footer-content {
@@ -24,7 +24,7 @@
 }
 
 .footer-left p {
-  color: #cccccc;
+  color: var(--english-walnut-100);
 }
 
 .footer-right {
@@ -40,10 +40,11 @@
   border-radius: 0.5rem;
   width: 20rem;
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--english-walnut-300);
 }
 
 .terminal-header {
-  background-color: #333;
+  background-color: var(--english-walnut-500);
   padding: 0.75rem;
   border-radius: 0.5rem 0.5rem 0 0;
   display: flex;
@@ -91,7 +92,7 @@
 .footer-status {
   text-align: right;
   font-size: 0.875rem;
-  color: #888888;
+  color: var(--english-walnut-200);
   font-family: var(--font-geist-mono);
 }
 

@@ -1,26 +1,37 @@
 @import url('./base.css');
 @import url('./components/navbar.css');
+@import url('./components/buttons.css');
 @import url('./components/hero.css');
 @import url('./components/work.css');
+@import url('./components/project-card.css');
 @import url('./components/technologies.css');
 @import url('./components/contact.css');
 @import url('./components/footer.css');
 
 :root {
-  --bg-color: #faf9f6;
-  --nav-bg: #f5f3f0;
-  --footer-bg: #2a2a2a;
-  --text-color: #2c2c2c;
-  --text-muted: #6b7280;
-  --accent-primary: #5a67d8;
-  --accent-secondary: #fa709a;
-  --accent-tertiary: #c084fc;
-  --hover-color: rgba(0, 0, 0, 0.05);
-  --bubble-bg: rgba(90, 103, 216, 0.1);
-  --card-bg: rgba(255, 255, 255, 0.6);
-  --border-color: rgba(0, 0, 0, 0.1);
-  --terminal-bg: #1a1a1a;
-  --terminal-text: #00ff00;
+  /* English Walnut Palette */
+  --english-walnut-50: #faf9f5;
+  --english-walnut-100: #cdb6b0;
+  --english-walnut-200: #9e7f76;
+  --english-walnut-300: #69544d;
+  --english-walnut-400: #3b2e2a;
+  --english-walnut-500: #160f0d;
+
+  /* Core Theme Colors */
+  --bg-color: var(--english-walnut-50);
+  --text-color: #202020;
+  --text-muted: #5a5a5a;
+  --accent-primary: #98523b;
+  --border-color: rgba(32, 32, 32, 0.15);
+  --hover-color: rgba(152, 82, 59, 0.1);
   
+  /* Navigation & Footer */
+  --nav-bg: #703b29;
+  --nav-active-bg: var(--english-walnut-50);
+  --footer-bg: #472317;
+  --terminal-bg: #111111;
+  --terminal-text: #e2d4d0;
+  
+  /* Typography */
   --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }

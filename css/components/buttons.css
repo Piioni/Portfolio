@@ -1,0 +1,36 @@
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-family: var(--font-geist-mono);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--accent-primary);
+  color: var(--bg-color);
+  border-color: var(--accent-primary);
+}
+
+.btn-primary:hover {
+  background-color: #814632; /* A slightly darker shade for hover */
+  border-color: #814632;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(152, 82, 59, 0.2);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-muted);
+  border-color: var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border-color: var(--text-color);
+}

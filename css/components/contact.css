@@ -1,25 +1,29 @@
 .contact {
-  padding: 6rem 0;
-  background: linear-gradient(135deg, var(--bg-color) 0%, var(--nav-bg) 100%);
+  padding: 4rem 0;
+  background-color: var(--bg-color);
 }
 
 .contact-content {
   display: flex;
   gap: 4rem;
-  align-items: center;
-  max-width: 60rem;
+  align-items: flex-start;
+  max-width: 65rem;
   margin: 0 auto;
 }
 
 .contact-left {
   flex: 1;
-  text-align: center;
+  text-align: left;
 }
 
 .contact-left h2 {
-  color: var(--accent-primary);
-  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--text-color) 0%, var(--accent-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
   font-size: 2.5rem;
+  font-weight: 800;
 }
 
 .contact-left p {
@@ -35,34 +39,51 @@
 .social-links {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .social-card {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
+  gap: 0.75rem;
+  padding: 1.5rem 1rem;
+  background: transparent;
   border: 1px solid var(--border-color);
   border-radius: 1rem;
   text-decoration: none;
-  color: var(--text-color);
-  font-weight: 500;
+  color: var(--text-muted);
+  font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: none;
+  text-align: center;
+  min-height: 120px;
+  justify-content: center;
 }
 
 .social-card:hover {
   border-color: var(--accent-primary);
-  background: rgba(90, 103, 216, 0.1);
-  transform: translateY(-0.25rem);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  background: var(--hover-color);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  color: var(--text-color);
+}
+
+.social-card:hover .social-icon {
+  fill: var(--accent-primary);
+  transform: scale(1.1);
 }
 
 .social-icon {
-  font-size: 1.5rem;
+  width: 32px;
+  height: 32px;
+  fill: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.social-card span {
+  font-size: 0.9rem;
+  font-family: var(--font-geist-mono);
 }
 
 @media (max-width: 768px) {
@@ -72,6 +93,17 @@
   }
 
   .social-links {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .social-card {
+    min-height: 100px;
+    padding: 1rem 0.75rem;
+  }
+
+  .social-icon {
+    width: 28px;
+    height: 28px;
   }
 }

@@ -69,16 +69,16 @@
   color: var(--text-color);
 }
 
+.social-icon {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
 .social-card:hover .social-icon {
   fill: var(--accent-primary);
   transform: scale(1.1);
-}
-
-.social-icon {
-  width: 32px;
-  height: 32px;
-  fill: var(--text-muted);
-  transition: all 0.3s ease;
 }
 
 .social-card span {
@@ -103,7 +103,7 @@
   }
 
   .social-icon {
-    width: 28px;
-    height: 28px;
+    width: 1.75rem;
+    height: 1.75rem;
   }
 }

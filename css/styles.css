@@ -1,4 +1,4 @@
-@import url('./base.css');
+@import url('./components/base.css');
 @import url('./components/navbar.css');
 @import url('./components/buttons.css');
 @import url('./components/hero.css');
@@ -11,6 +11,7 @@
 :root {
   /* English Walnut Palette */
   --english-walnut-50: #faf9f5;
+  --english-walnut-50-alt: #f7f5f0;
   --english-walnut-100: #cdb6b0;
   --english-walnut-200: #9e7f76;
   --english-walnut-300: #69544d;
@@ -24,6 +25,7 @@
   --accent-primary: #98523b;
   --border-color: rgba(32, 32, 32, 0.15);
   --hover-color: rgba(152, 82, 59, 0.1);
+  --card-bg: var(--english-walnut-50-alt);
   
   /* Navigation & Footer */
   --nav-bg: #703b29;

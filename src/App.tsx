@@ -21,34 +21,38 @@ function PageLoader() {
 /**
  * Router configuration with Layout wrapper and lazy-loaded pages
  */
-const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Layout />,
-        children: [
-            {
-                index: true,
-                element: <Home />,
-            },
-            {
-                path: 'projects',
-                element: (
-                    <Suspense fallback={<PageLoader />}>
-                        <Projects />
-                    </Suspense>
-                ),
-            },
-            {
-                path: 'blog',
-                element: (
-                    <Suspense fallback={<PageLoader />}>
-                        <Blog />
-                    </Suspense>
-                ),
-            },
-        ],
-    },
-]);
+const basename = import.meta.env.PROD ? '/Portfolio' : '/';
+const router = createBrowserRouter(
+    [
+        {
+            path: '/',
+            element: <Layout />,
+            children: [
+                {
+                    index: true,
+                    element: <Home />,
+                },
+                {
+                    path: 'projects',
+                    element: (
+                        <Suspense fallback={<PageLoader />}>
+                            <Projects />
+                        </Suspense>
+                    ),
+                },
+                {
+                    path: 'blog',
+                    element: (
+                        <Suspense fallback={<PageLoader />}>
+                            <Blog />
+                        </Suspense>
+                    ),
+                },
+            ],
+        },
+    ],
+    { basename }
+);
 
 /**
  * App component - Root of the application

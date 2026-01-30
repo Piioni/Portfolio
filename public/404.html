@@ -4,13 +4,13 @@
         <meta charset="utf-8" />
         <title>Portfolio - Redirecting...</title>
         <script>
-            // Single Page Apps for GitHub Pages
-            // https://github.com/rafgraph/spa-github-pages
-            // Guarda la ruta actual en sessionStorage y redirige a index.html
-            // para que React Router pueda manejar la navegación
-            sessionStorage.redirect = location.href;
+            // Redirige cualquier 404 a index.html para que React Router maneje la ruta
+            var base = '/Portfolio/';
+            var path = location.pathname;
+            if (!path.endsWith(base + 'index.html')) {
+                location.replace(base + 'index.html');
+            }
         </script>
-        <meta http-equiv="refresh" content="0;URL='/'" />
     </head>
     <body>
         <p>Redirecting...</p>

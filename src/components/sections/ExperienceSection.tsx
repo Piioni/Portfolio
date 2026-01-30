@@ -11,8 +11,8 @@ interface ExperienceSectionProps {
  */
 export function ExperienceSection({ className }: ExperienceSectionProps) {
     return (
-        <section className={cn('py-16', className)} aria-labelledby="experience-heading">
-            <h2 id="experience-heading" className="text-2xl font-bold text-primary mb-8">
+        <section className={cn('py-8', className)} aria-labelledby="experience-heading">
+            <h2 id="experience-heading" className="section-title">
                 Experience
             </h2>
 

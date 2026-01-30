@@ -14,9 +14,9 @@ interface ProjectsPreviewProps {
  */
 export function ProjectsPreview({ className }: ProjectsPreviewProps) {
     return (
-        <section className={cn('py-16', className)} aria-labelledby="projects-heading">
-            <div className="flex items-center justify-between mb-8">
-                <h2 id="projects-heading" className="text-2xl font-bold text-primary">
+        <section className={cn('py-8', className)} aria-labelledby="projects-heading">
+            <div className="flex items-center justify-between mb-6">
+                <h2 id="projects-heading" className="section-title mb-0!">
                     Projects
                 </h2>
 

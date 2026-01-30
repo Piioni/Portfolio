@@ -12,7 +12,10 @@ interface HeroSectionProps {
  */
 export function HeroSection({ className }: HeroSectionProps) {
     return (
-        <section className={cn('py-16 md:py-24', className)} aria-labelledby="hero-heading">
+        <section className={cn('py-8 md:py-12', className)} aria-labelledby="hero-heading">
+            {/* Section title */}
+            <h2 className="section-title">Me, Myself and I</h2>
+
             {/* Bubble container */}
             <div className="hero-bubble">
                 <div className="flex flex-col items-center text-center md:flex-row md:items-center md:text-left gap-8">
@@ -20,12 +23,9 @@ export function HeroSection({ className }: HeroSectionProps) {
                     <Avatar src={cattoImg} alt="Adithya's profile picture" size="xl" className="shrink-0" />
 
                     {/* Content */}
-                    <div className="space-y-4">
+                    <div className="space-y-3">
                         {/* Greeting */}
-                        <h1
-                            id="hero-heading"
-                            className="text-3xl md:text-4xl font-bold text-text-primary-light dark:text-text-primary-dark"
-                        >
+                        <h1 id="hero-heading" className="text-2xl md:text-3xl font-bold text-primary">
                             Hi, I am <span className="text-accent-lavender">Adithya</span>
                         </h1>
 
@@ -35,20 +35,20 @@ export function HeroSection({ className }: HeroSectionProps) {
                         </p>
 
                         {/* Technical info */}
-                        <p className="text-muted text-base">
+                        <p className="text-muted text-sm">
                             I use Linux BTW. Currently I'm on{' '}
                             <span className="text-accent-lavender font-medium">NixOS</span>.
                         </p>
 
                         {/* Tech stack */}
-                        <p className="text-muted text-base">
+                        <p className="text-muted text-sm">
                             My main tech stack is <span className="text-accent-lavender font-medium">NextJS</span>,{' '}
                             <span className="text-accent-lavender font-medium">TypeScript</span> and{' '}
                             <span className="text-accent-lavender font-medium">Tailwind</span>.
                         </p>
 
                         {/* Arts link */}
-                        <p className="text-muted text-base">
+                        <p className="text-muted text-sm">
                             I like to draw. I mainly just recreate pictures from pinterest.{' '}
                             <a href="/arts" className="text-accent-lavender hover:underline underline-offset-4">
                                 Check out the arts page

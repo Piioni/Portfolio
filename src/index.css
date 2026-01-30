@@ -50,24 +50,38 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Background grid pattern - using inline SVG for better control */
 body {
     margin: 0;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M24 0v24M0 0h24' stroke='rgba(0,0,0,0.06)' stroke-width='1'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-position: 0 0;
+}
+
+/* Dark mode background grid */
+.dark body {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M24 0v24M0 0h24' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/svg%3E");
 }
 
 /* ============================================
    Custom Component Classes
    ============================================ */
 @layer components {
+    /* Section title - accent color */
+    .section-title {
+        @apply text-2xl font-bold text-accent-lavender mb-6;
+    }
+
     /* Hero bubble - floating transparent container */
     .hero-bubble {
-        @apply p-8 rounded-2xl;
+        @apply p-6 md:p-8 rounded-2xl;
         @apply bg-surface-light/50 dark:bg-surface-dark/50;
         @apply border border-border-light dark:border-border-dark;
         @apply backdrop-blur-sm;
-        @apply shadow-lg shadow-black/5 dark:shadow-black/20;
     }
 
     /* Project card with hover animation */

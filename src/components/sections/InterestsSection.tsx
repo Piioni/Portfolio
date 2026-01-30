@@ -21,8 +21,8 @@ const INTERESTS = [
  */
 export function InterestsSection({ className }: InterestsSectionProps) {
     return (
-        <section className={cn('py-16', className)} aria-labelledby="interests-heading">
-            <h2 id="interests-heading" className="text-2xl font-bold text-primary mb-8">
+        <section className={cn('py-8', className)} aria-labelledby="interests-heading">
+            <h2 id="interests-heading" className="section-title">
                 Interests
             </h2>
 

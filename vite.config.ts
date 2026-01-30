@@ -12,7 +12,7 @@ export default defineConfig({
         },
     },
     // Base path para GitHub Pages
-    base: process.env.NODE_ENV === 'production' ? '/Portfolio/' : '/',
+    base: '/Portfolio/',
     server: {
         host: '0.0.0.0',
         port: 5173,

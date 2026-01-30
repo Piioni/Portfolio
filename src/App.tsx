@@ -4,7 +4,6 @@ import { Layout } from '@/components/layout';
 import Home from '@/pages/Home';
 
 // Lazy load non-critical pages for better performance
-const Experience = lazy(() => import('@/pages/Experience'));
 const Projects = lazy(() => import('@/pages/Projects'));
 const Blog = lazy(() => import('@/pages/Blog'));
 
@@ -30,14 +29,6 @@ const router = createBrowserRouter([
             {
                 index: true,
                 element: <Home />,
-            },
-            {
-                path: 'experience',
-                element: (
-                    <Suspense fallback={<PageLoader />}>
-                        <Experience />
-                    </Suspense>
-                ),
             },
             {
                 path: 'projects',

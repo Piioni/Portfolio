@@ -8,7 +8,6 @@ export const SKILL_GROUPS: readonly SkillGroup[] = [
             { id: 'html', name: 'HTML', icon: 'SiHtml5', category: 'frontend' },
             { id: 'typescript', name: 'TypeScript', icon: 'SiTypescript', category: 'frontend' },
             { id: 'react', name: 'React', icon: 'SiReact', category: 'frontend' },
-            { id: 'react-native', name: 'React Native', icon: 'SiReact', category: 'frontend' },
             { id: 'tailwindcss', name: 'TailwindCSS', icon: 'SiTailwindcss', category: 'frontend' },
         ],
     },

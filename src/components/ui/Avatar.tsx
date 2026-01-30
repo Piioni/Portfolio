@@ -30,6 +30,7 @@ export const Avatar = forwardRef<HTMLImageElement, AvatarProps>(
                     'border-2 border-accent-lavender/30',
                     'transition-all duration-300 ease-smooth',
                     'hover:border-accent-lavender hover:shadow-glow-lavender',
+                    'hover:scale-110 hover:rotate-3',
                     sizeStyles[size],
                     className
                 )}

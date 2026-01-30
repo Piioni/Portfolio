@@ -50,21 +50,33 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Background grid pattern - using inline SVG for better control */
 body {
     margin: 0;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    position: relative;
-    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M24 0v24M0 0h24' stroke='rgba(0,0,0,0.06)' stroke-width='1'/%3E%3C/svg%3E");
-    background-repeat: repeat;
-    background-position: 0 0;
 }
 
-/* Dark mode background grid */
-.dark body {
-    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M24 0v24M0 0h24' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3C/svg%3E");
+/* Fixed background grid pattern - subtle decoration */
+.background-pattern {
+    background-image:
+        linear-gradient(90deg, hsla(0, 0%, 100%, 0.035) 1px, transparent 0),
+        linear-gradient(180deg, hsla(0, 0%, 100%, 0.035) 1px, transparent 0);
+    background-size: 20px 20px;
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+/* Light mode background grid */
+html:not(.dark) .background-pattern {
+    background-image:
+        linear-gradient(90deg, hsla(0, 0%, 0%, 0.035) 1px, transparent 0),
+        linear-gradient(180deg, hsla(0, 0%, 0%, 0.035) 1px, transparent 0);
 }
 
 /* ============================================
@@ -76,24 +88,46 @@ body {
         @apply text-2xl font-bold text-accent-lavender mb-6;
     }
 
-    /* Hero bubble - floating transparent container */
-    .hero-bubble {
-        @apply p-6 md:p-8 rounded-2xl;
-        @apply bg-surface-light/50 dark:bg-surface-dark/50;
+    /* Reusable bubble - semi-transparent container that shows grid through */
+    .bubble {
+        @apply p-4 md:p-6 rounded-2xl;
         @apply border border-border-light dark:border-border-dark;
-        @apply backdrop-blur-sm;
+        background-color: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(4px);
     }
 
-    /* Project card with hover animation */
+    .dark .bubble {
+        background-color: rgba(37, 37, 37, 0.92);
+    }
+
+    /* Hero bubble - larger padding variant */
+    .hero-bubble {
+        @apply p-6 md:p-8 rounded-2xl;
+        @apply border border-border-light dark:border-border-dark;
+        background-color: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(4px);
+    }
+
+    .dark .hero-bubble {
+        background-color: rgba(37, 37, 37, 0.92);
+    }
+
+    /* Project card - bubble with exclusive hover animation */
     .project-card {
-        @apply flex flex-col h-full p-5 rounded-xl;
-        @apply bg-surface-light dark:bg-surface-dark;
+        @apply flex flex-col h-full p-5 rounded-2xl;
         @apply border border-border-light dark:border-border-dark;
         @apply transition-all duration-300 ease-smooth;
+        background-color: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(4px);
+    }
+
+    .dark .project-card {
+        background-color: rgba(37, 37, 37, 0.92);
     }
 
     .project-card:hover {
-        @apply border-accent-lavender -translate-y-1;
+        @apply border-accent-lavender;
+        transform: translateY(-4px) scale(1.02);
     }
 
     /* Reusable text styles */

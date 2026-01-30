@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 /**
  * Layout component wraps all pages with common structure
- * Includes Navbar, Footer - Background pattern is handled via CSS on body
+ * Includes fixed background grid, Navbar, and Footer
  */
 export function Layout() {
     return (
@@ -17,6 +17,9 @@ export function Layout() {
                 'font-mono'
             )}
         >
+            {/* Fixed background grid pattern */}
+            <div className="background-pattern" aria-hidden="true" />
+
             {/* Fixed header */}
             <Navbar />
 

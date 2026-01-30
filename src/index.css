@@ -1,0 +1,134 @@
+@import 'tailwindcss';
+
+/* ============================================
+   Dark Mode Configuration
+   ============================================ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ============================================
+   Theme Configuration
+   ============================================ */
+@theme {
+    /* === COLORS === */
+    --color-background-dark: #1e1e1e;
+    --color-background-light: #fafafa;
+
+    --color-accent-lavender: oklch(0.72 0.12 290);
+    --color-accent-lavender-hover: oklch(0.78 0.14 290);
+    --color-accent-lavender-muted: oklch(0.65 0.08 290);
+
+    --color-surface-dark: #252525;
+    --color-surface-light: #ffffff;
+
+    --color-border-dark: hsla(0, 0%, 100%, 0.1);
+    --color-border-light: hsla(0, 0%, 0%, 0.1);
+
+    --color-text-primary-dark: #e4e4e7;
+    --color-text-primary-light: #18181b;
+    --color-text-muted-dark: #a1a1aa;
+    --color-text-muted-light: #71717a;
+
+    /* === TYPOGRAPHY === */
+    --font-mono:
+        'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono',
+        monospace;
+    --font-display: 'Maple Mono', 'JetBrains Mono', ui-monospace, monospace;
+
+    /* === SHADOWS === */
+    --shadow-glow-lavender: 0 0 20px oklch(0.72 0.12 290 / 0.3);
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+    /* === TRANSITIONS === */
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+html {
+    font-family: var(--font-mono);
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   Custom Component Classes
+   ============================================ */
+@layer components {
+    /* Hero bubble - floating transparent container */
+    .hero-bubble {
+        @apply p-8 rounded-2xl;
+        @apply bg-surface-light/50 dark:bg-surface-dark/50;
+        @apply border border-border-light dark:border-border-dark;
+        @apply backdrop-blur-sm;
+        @apply shadow-lg shadow-black/5 dark:shadow-black/20;
+    }
+
+    /* Project card with hover animation */
+    .project-card {
+        @apply flex flex-col h-full p-5 rounded-xl;
+        @apply bg-surface-light dark:bg-surface-dark;
+        @apply border border-border-light dark:border-border-dark;
+        @apply transition-all duration-300 ease-smooth;
+    }
+
+    .project-card:hover {
+        @apply border-accent-lavender -translate-y-1;
+    }
+
+    /* Reusable text styles */
+    .text-muted {
+        @apply text-text-muted-light dark:text-text-muted-dark;
+    }
+
+    .text-primary {
+        @apply text-text-primary-light dark:text-text-primary-dark;
+    }
+
+    /* Reusable link styles */
+    .link-muted {
+        @apply flex items-center gap-1.5 text-sm;
+        @apply text-text-muted-light dark:text-text-muted-dark;
+        @apply hover:text-accent-lavender transition-colors;
+    }
+
+    /* Surface backgrounds */
+    .bg-surface {
+        @apply bg-surface-light dark:bg-surface-dark;
+    }
+
+    /* Border styles */
+    .border-themed {
+        @apply border border-border-light dark:border-border-dark;
+    }
+
+    /* Hover glow effect for interactive elements */
+    .hover-glow {
+        @apply transition-all duration-300 ease-smooth;
+    }
+
+    .hover-glow:hover {
+        box-shadow: var(--shadow-glow-lavender);
+        border-color: var(--color-accent-lavender);
+    }
+}
+
+/* ============================================
+   Focus Styles for Accessibility
+   ============================================ */
+@layer utilities {
+    .focus-ring {
+        outline: none;
+    }
+
+    .focus-ring:focus-visible {
+        outline: 2px solid var(--color-accent-lavender);
+        outline-offset: 2px;
+    }
+}

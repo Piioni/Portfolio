@@ -9,9 +9,6 @@ interface ProjectsPreviewProps {
     className?: string;
 }
 
-/**
- * ProjectsPreview displays featured projects with a link to full projects page
- */
 export function ProjectsPreview({ className }: ProjectsPreviewProps) {
     return (
         <section className={cn('py-8', className)} aria-labelledby="projects-heading">

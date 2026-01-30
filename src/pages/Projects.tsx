@@ -2,10 +2,6 @@ import { Container } from '@/components/ui';
 import { ProjectCard } from '@/components/compound';
 import { PROJECTS } from '@/data';
 
-/**
- * Projects page - full list of all projects
- * Lazy loaded for performance
- */
 export default function Projects() {
     return (
         <Container>

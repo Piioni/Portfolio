@@ -20,16 +20,6 @@ export const PROJECTS: readonly Project[] = [
         githubUrl: 'https://github.com/username/task-app',
         featured: true,
     },
-    {
-        id: 'project-3',
-        title: 'E-Commerce Platform',
-        description:
-            'A scalable e-commerce solution with product management, cart functionality, and payment integration.',
-        technologies: ['Next.js', 'Stripe', 'PostgreSQL', 'Prisma'],
-        githubUrl: 'https://github.com/username/ecommerce',
-        liveUrl: 'https://shop.example.com',
-        featured: true,
-    },
 ] as const;
 
 export const FEATURED_PROJECTS = PROJECTS.filter((project) => project.featured);

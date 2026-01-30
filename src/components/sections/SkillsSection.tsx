@@ -8,7 +8,6 @@ interface SkillsSectionProps {
     className?: string;
 }
 
-/** Renders a single skill category bubble */
 function SkillBubble({ group }: { group: SkillGroup }) {
     return (
         <Bubble>

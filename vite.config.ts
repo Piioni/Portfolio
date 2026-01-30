@@ -11,4 +11,6 @@ export default defineConfig({
             '@': resolve(__dirname, './src'),
         },
     },
+    // Base path para GitHub Pages
+    base: process.env.NODE_ENV === 'production' ? '/Portfolio/' : '/',
 });

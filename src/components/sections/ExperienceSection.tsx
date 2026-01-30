@@ -6,9 +6,6 @@ interface ExperienceSectionProps {
     className?: string;
 }
 
-/**
- * ExperienceSection displays work history in a vertical timeline
- */
 export function ExperienceSection({ className }: ExperienceSectionProps) {
     return (
         <section className={cn('py-8', className)} aria-labelledby="experience-heading">

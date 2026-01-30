@@ -36,6 +36,7 @@ export const SKILL_GROUPS: readonly SkillGroup[] = [
             { id: 'git', name: 'Git', icon: 'SiGit', category: 'devtools' },
             { id: 'github', name: 'GitHub', icon: 'SiGithub', category: 'devtools' },
             { id: 'docker', name: 'Docker', icon: 'SiDocker', category: 'devtools' },
+            { id: 'vscode', name: 'VS Code', icon: 'SiVscodium', category: 'devtools' },
         ],
     },
     {
@@ -43,8 +44,8 @@ export const SKILL_GROUPS: readonly SkillGroup[] = [
         label: 'Operating Systems',
         skills: [
             { id: 'linux', name: 'Linux', icon: 'SiLinux', category: 'os' },
-            { id: 'mac', name: 'Mac', icon: 'SiApple', category: 'os' },
             { id: 'windows', name: 'Windows', icon: 'SiWindows', category: 'os' },
+            { id: 'mac', name: 'Mac', icon: 'SiApple', category: 'os' },
         ],
     },
 ] as const;

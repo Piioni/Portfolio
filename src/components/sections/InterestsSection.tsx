@@ -1,24 +1,11 @@
 import { InterestTag } from '@/components/compound';
 import { cn } from '@/lib/utils';
+import { INTERESTS } from '@/data';
 
 interface InterestsSectionProps {
     className?: string;
 }
 
-const INTERESTS = [
-    { label: 'Open Source', emoji: '💻' },
-    { label: 'Linux', emoji: '🐧' },
-    { label: 'Reading', emoji: '📚' },
-    { label: 'Movies', emoji: '🎬' },
-    { label: 'Drawing', emoji: '🎨' },
-    { label: 'Music', emoji: '🎵' },
-    { label: 'Coffee', emoji: '☕' },
-    { label: 'Gaming', emoji: '🎮' },
-];
-
-/**
- * InterestsSection displays personal interests and hobbies
- */
 export function InterestsSection({ className }: InterestsSectionProps) {
     return (
         <section className={cn('py-8', className)} aria-labelledby="interests-heading">

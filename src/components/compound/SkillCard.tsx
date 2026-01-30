@@ -19,6 +19,7 @@ import {
     SiPrisma,
     SiSocketdotio,
     SiStripe,
+    SiVscodium,
 } from 'react-icons/si';
 import { FaJava, FaWindows } from 'react-icons/fa';
 import type { IconType } from 'react-icons';
@@ -56,6 +57,7 @@ const iconConfig: Record<string, { icon: IconType; color: string }> = {
     SiSocketdotio: { icon: SiSocketdotio, color: '#010101' },
     SiStripe: { icon: SiStripe, color: '#635BFF' },
     FaJava: { icon: FaJava, color: '#ED8B00' },
+    SiVscodium: { icon: SiVscodium, color: '#007ACC' },
 };
 
 /**

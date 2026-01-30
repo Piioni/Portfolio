@@ -2,14 +2,14 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <link rel="icon" type="image/webp" href="/rei.webp" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
-            content="Adithya - Full Stack Developer Portfolio. React, TypeScript, and Tailwind expert."
+            content="Piioni - Full Stack Developer Portfolio. React, TypeScript, and Tailwind expert."
         />
         <meta name="theme-color" content="#1e1e1e" />
-        <title>Adithya | Full Stack Developer</title>
+        <title>Piioni | Full Stack Developer</title>
 
         <!-- Anti-FOUC: Apply theme before render to prevent flash -->
         <script>
@@ -21,6 +21,17 @@
                     document.documentElement.classList.add('dark');
                 } else {
                     document.documentElement.classList.remove('dark');
+                }
+            })();
+        </script>
+
+        <!-- GitHub Pages SPA redirect handler -->
+        <script>
+            (function () {
+                const redirect = sessionStorage.redirect;
+                delete sessionStorage.redirect;
+                if (redirect && redirect !== location.href) {
+                    history.replaceState(null, null, redirect);
                 }
             })();
         </script>

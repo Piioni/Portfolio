@@ -4,25 +4,25 @@ export const SOCIAL_LINKS: readonly SocialLink[] = [
     {
         id: 'github',
         platform: 'github',
-        url: 'https://github.com/username',
+        url: 'https://github.com/piioni',
         label: 'GitHub',
     },
     {
         id: 'linkedin',
         platform: 'linkedin',
-        url: 'https://linkedin.com/in/username',
+        url: 'https://www.linkedin.com/in/juan-rangel-002294300/?locale=en_US',
         label: 'LinkedIn',
     },
     {
         id: 'twitter',
         platform: 'twitter',
-        url: 'https://twitter.com/username',
+        url: 'https://twitter.com/Juann936',
         label: 'Twitter',
     },
     {
         id: 'email',
         platform: 'email',
-        url: 'mailto:hello@example.com',
+        url: 'mailto:piioni.unwell796@slmail.me',
         label: 'Email',
     },
 ] as const;

@@ -1,9 +1,5 @@
 import { Container } from '@/components/ui';
 
-/**
- * Blog page - placeholder for blog posts
- * Lazy loaded for performance
- */
 export default function Blog() {
     return (
         <Container>

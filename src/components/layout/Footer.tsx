@@ -30,7 +30,7 @@ export function Footer({ className }: FooterProps) {
 
                     {/* Copyright */}
                     <p className="text-sm text-text-muted-light dark:text-text-muted-dark">
-                        © {currentYear} Adithya. All rights reserved.
+                        © {currentYear} Piioni. All rights reserved.
                     </p>
                 </div>
             </Container>

@@ -1,5 +1,5 @@
 import cattoImg from '@/assets/catto.jpg';
-import { Avatar } from '@/components/ui';
+import { Avatar, Bubble } from '@/components/ui';
 import { cn } from '@/lib/utils';
 
 interface HeroSectionProps {
@@ -17,7 +17,7 @@ export function HeroSection({ className }: HeroSectionProps) {
             <h2 className="section-title">Me, Myself and I</h2>
 
             {/* Bubble container */}
-            <div className="hero-bubble">
+            <Bubble variant="hero">
                 <div className="flex flex-col items-center text-center md:flex-row md:items-center md:text-left gap-8">
                     {/* Avatar - centered vertically with content */}
                     <Avatar src={cattoImg} alt="Adithya's profile picture" size="xl" className="shrink-0" />
@@ -57,7 +57,7 @@ export function HeroSection({ className }: HeroSectionProps) {
                         </p>
                     </div>
                 </div>
-            </div>
+            </Bubble>
         </section>
     );
 }

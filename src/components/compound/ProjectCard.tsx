@@ -1,5 +1,6 @@
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import type { Project } from '@/types';
+import { Bubble } from '@/components/ui';
 import { cn } from '@/lib/utils';
 import { SkillCard } from './SkillCard';
 
@@ -31,7 +32,7 @@ const techIconMap: Record<string, string> = {
  */
 export function ProjectCard({ project, className }: ProjectCardProps) {
     return (
-        <article className={cn('project-card', className)}>
+        <Bubble variant="card" hoverable as="article" className={cn(className)}>
             {/* Title */}
             <h3 className="text-lg font-semibold text-text-primary-light dark:text-text-primary-dark mb-2">
                 {project.title}
@@ -82,6 +83,6 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
                     </a>
                 )}
             </div>
-        </article>
+        </Bubble>
     );
 }

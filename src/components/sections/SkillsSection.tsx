@@ -1,5 +1,6 @@
 import { SKILL_GROUPS } from '@/data';
 import { SkillCard } from '@/components/compound';
+import { Bubble } from '@/components/ui';
 import { cn } from '@/lib/utils';
 import type { SkillGroup } from '@/types';
 
@@ -10,7 +11,7 @@ interface SkillsSectionProps {
 /** Renders a single skill category bubble */
 function SkillBubble({ group }: { group: SkillGroup }) {
     return (
-        <div className="bubble">
+        <Bubble>
             {/* Category label */}
             <h3 className="text-xs font-semibold text-accent-lavender uppercase tracking-wider mb-3">{group.label}</h3>
 
@@ -20,7 +21,7 @@ function SkillBubble({ group }: { group: SkillGroup }) {
                     <SkillCard key={skill.id} skill={skill} />
                 ))}
             </div>
-        </div>
+        </Bubble>
     );
 }
 

@@ -15,10 +15,13 @@
 
     --color-accent-lavender: oklch(0.72 0.12 290);
     --color-accent-lavender-hover: oklch(0.78 0.14 290);
-    --color-accent-lavender-muted: oklch(0.65 0.08 290);
 
     --color-surface-dark: #252525;
     --color-surface-light: #ffffff;
+
+    /* Bubble backgrounds (semi-transparent) */
+    --color-bubble-dark: rgba(37, 37, 37, 0.92);
+    --color-bubble-light: rgba(255, 255, 255, 0.92);
 
     --color-border-dark: hsla(0, 0%, 100%, 0.1);
     --color-border-light: hsla(0, 0%, 0%, 0.1);
@@ -32,11 +35,9 @@
     --font-mono:
         'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono',
         monospace;
-    --font-display: 'Maple Mono', 'JetBrains Mono', ui-monospace, monospace;
 
     /* === SHADOWS === */
     --shadow-glow-lavender: 0 0 20px oklch(0.72 0.12 290 / 0.3);
-    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 
     /* === TRANSITIONS === */
     --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
@@ -86,48 +87,6 @@ html:not(.dark) .background-pattern {
     /* Section title - accent color */
     .section-title {
         @apply text-2xl font-bold text-accent-lavender mb-6;
-    }
-
-    /* Reusable bubble - semi-transparent container that shows grid through */
-    .bubble {
-        @apply p-4 md:p-6 rounded-2xl;
-        @apply border border-border-light dark:border-border-dark;
-        background-color: rgba(255, 255, 255, 0.92);
-        backdrop-filter: blur(4px);
-    }
-
-    .dark .bubble {
-        background-color: rgba(37, 37, 37, 0.92);
-    }
-
-    /* Hero bubble - larger padding variant */
-    .hero-bubble {
-        @apply p-6 md:p-8 rounded-2xl;
-        @apply border border-border-light dark:border-border-dark;
-        background-color: rgba(255, 255, 255, 0.92);
-        backdrop-filter: blur(4px);
-    }
-
-    .dark .hero-bubble {
-        background-color: rgba(37, 37, 37, 0.92);
-    }
-
-    /* Project card - bubble with exclusive hover animation */
-    .project-card {
-        @apply flex flex-col h-full p-5 rounded-2xl;
-        @apply border border-border-light dark:border-border-dark;
-        @apply transition-all duration-300 ease-smooth;
-        background-color: rgba(255, 255, 255, 0.92);
-        backdrop-filter: blur(4px);
-    }
-
-    .dark .project-card {
-        background-color: rgba(37, 37, 37, 0.92);
-    }
-
-    .project-card:hover {
-        @apply border-accent-lavender;
-        transform: translateY(-4px) scale(1.02);
     }
 
     /* Reusable text styles */

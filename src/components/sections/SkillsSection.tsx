@@ -42,13 +42,11 @@ export function SkillsSection({ className }: SkillsSectionProps) {
                 Skills
             </h2>
 
-            {/* Top row: Frontend + Backend (2 columns, centered) */}
-            <div className="max-w-4xl mx-auto mb-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {topRow.map((group) => (
-                        <SkillBubble key={group.category} group={group} />
-                    ))}
-                </div>
+            {/* Top row: Frontend + Backend (2 columns, full width) */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 w-full">
+                {topRow.map((group) => (
+                    <SkillBubble key={group.category} group={group} />
+                ))}
             </div>
 
             {/* Bottom row: Database + Dev Tools + OS (3 columns) */}

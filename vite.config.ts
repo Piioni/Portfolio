@@ -11,8 +11,8 @@ export default defineConfig({
             '@': resolve(__dirname, './src'),
         },
     },
-    // Base path para GitHub Pages
-    base: '/Portfolio/',
+    // Base path dinámico para desarrollo y producción
+    base: process.env.NODE_ENV === 'production' ? '/Portfolio/' : '/',
     server: {
         host: '0.0.0.0',
         port: 5173,

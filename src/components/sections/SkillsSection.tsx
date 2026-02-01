@@ -1,6 +1,5 @@
 import { SKILL_GROUPS } from '@/data';
-import { SkillCard } from '@/components/compound';
-import { Bubble } from '@/components/ui';
+import { SkillCard, Bubble } from '@/components/ui';
 import { cn } from '@/lib/utils';
 import type { SkillGroup } from '@/types';
 

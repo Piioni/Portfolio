@@ -28,9 +28,8 @@ export function Footer({ className }: FooterProps) {
                         ))}
                     </div>
 
-                    {/* Copyright */}
                     <p className="text-sm text-text-muted-light dark:text-text-muted-dark">
-                        © {currentYear} Piioni. All rights reserved.
+                        Piioni &copy; {currentYear}. All rights reserved.
                     </p>
                 </div>
             </Container>

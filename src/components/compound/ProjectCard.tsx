@@ -1,30 +1,12 @@
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import type { Project } from '@/types';
-import { Bubble } from '@/components/ui';
+import { Bubble, SkillCard } from '@/components/ui';
 import { cn } from '@/lib/utils';
-import { SkillCard } from './SkillCard';
 
 interface ProjectCardProps {
     project: Project;
     className?: string;
 }
-
-/**
- * Maps technology names to icon identifiers
- */
-const techIconMap: Record<string, string> = {
-    React: 'SiReact',
-    TypeScript: 'SiTypescript',
-    TailwindCSS: 'SiTailwindcss',
-    Vite: 'SiVite',
-    NestJS: 'SiNestjs',
-    MongoDB: 'SiMongodb',
-    'Next.js': 'SiNextdotjs',
-    PostgreSQL: 'SiPostgresql',
-    Prisma: 'SiPrisma',
-    'Socket.io': 'SiSocketdotio',
-    Stripe: 'SiStripe',
-};
 
 /**
  * ProjectCard component displays a project preview
@@ -41,7 +23,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
             {/* Description */}
             <p className="text-muted text-sm mb-4 grow">{project.description}</p>
 
-            {/* Technologies using SkillCard style */}
+            {/* Technologies using SkillCard */}
             <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech) => (
                     <SkillCard
@@ -49,7 +31,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
                         skill={{
                             id: tech.toLowerCase(),
                             name: tech,
-                            icon: techIconMap[tech] || 'SiReact',
+                            icon: tech,
                             category: 'frontend',
                         }}
                     />

@@ -1,4 +1,4 @@
-import { InterestTag } from '@/components/compound';
+import { InterestTag } from '@/components/ui';
 import { cn } from '@/lib/utils';
 import { INTERESTS } from '@/data';
 

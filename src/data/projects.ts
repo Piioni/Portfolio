@@ -13,11 +13,11 @@ export const PROJECTS: readonly Project[] = [
     },
     {
         id: 'project-2',
-        title: 'Task Management App',
+        title: 'Pegasus Medical Supply Tracker',
         description:
-            'A full-stack task management application with real-time updates, user authentication, and collaborative features.',
-        technologies: ['React', 'NestJS', 'MongoDB', 'Socket.io'],
-        githubUrl: 'https://github.com/username/task-app',
+            'A web application for tracking medical supplies across multiple hospitals, featuring role-based access control and real-time inventory updates.',
+        technologies: ['NestJS', 'MongoDB', 'Socket.io', 'Stripe'],
+        githubUrl: 'https://github.com/Piioni/Pegasus-Medical-WebPage',
         featured: true,
     },
 ] as const;

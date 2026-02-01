@@ -14,7 +14,7 @@ export function ProjectsPreview({ className }: ProjectsPreviewProps) {
         <section className={cn('py-8', className)} aria-labelledby="projects-heading">
             <div className="flex items-center justify-between mb-6">
                 <h2 id="projects-heading" className="section-title mb-0!">
-                    Projects
+                    Featured Projects
                 </h2>
 
                 <Link to="/projects">

@@ -20,15 +20,12 @@ export function Layout() {
             {/* Fixed background grid pattern */}
             <div className="background-pattern" aria-hidden="true" />
 
-            {/* Fixed header */}
             <Navbar />
 
-            {/* Main content with top padding for fixed navbar */}
             <main className="grow pt-20 pb-8">
                 <Outlet />
             </main>
 
-            {/* Footer */}
             <Footer />
         </div>
     );

@@ -16,7 +16,7 @@ export function Container({ children, className, fluid = false }: ContainerProps
         <div
             className={cn(
                 'mx-auto w-full px-4',
-                !fluid && 'max-w-[95%] md:max-w-3xl lg:max-w-4xl xl:max-w-5xl',
+                !fluid && 'max-w-[95%] md:max-w-10/12 lg:max-w-4xl xl:max-w-5xl',
                 className
             )}
         >

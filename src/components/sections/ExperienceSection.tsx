@@ -1,5 +1,5 @@
 import { EXPERIENCES } from '@/data';
-import { Timeline, ExperienceCard } from '@/components/compound';
+import { ExperienceCard } from '@/components/compound';
 import { cn } from '@/lib/utils';
 
 interface ExperienceSectionProps {
@@ -13,11 +13,11 @@ export function ExperienceSection({ className }: ExperienceSectionProps) {
                 Experience
             </h2>
 
-            <Timeline>
+            <div className="relative">
                 {EXPERIENCES.map((experience) => (
                     <ExperienceCard key={experience.id} experience={experience} />
                 ))}
-            </Timeline>
+            </div>
         </section>
     );
 }

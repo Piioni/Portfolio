@@ -32,7 +32,7 @@ export function Navbar() {
                         to="/"
                         className="text-xl font-bold text-accent-lavender hover:text-accent-lavender/80 transition-colors"
                     >
-                        Portfolio
+                        <span>{'<Dev/>'}</span>
                     </Link>
 
                     {/* Desktop Navigation Links */}

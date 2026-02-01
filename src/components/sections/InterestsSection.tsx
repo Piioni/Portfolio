@@ -8,7 +8,7 @@ interface InterestsSectionProps {
 
 export function InterestsSection({ className }: InterestsSectionProps) {
     return (
-        <section className={cn('py-8', className)} aria-labelledby="interests-heading">
+        <section className={cn('py-12', className)} aria-labelledby="interests-heading">
             <h2 id="interests-heading" className="section-title">
                 Interests
             </h2>

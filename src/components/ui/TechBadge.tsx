@@ -1,18 +1,18 @@
-import type { Skill } from '@/types';
 import { cn } from '@/lib/utils';
 import { getIconConfig } from '@/lib/iconConfig';
 
-interface SkillCardProps {
-    skill: Skill;
+interface TechBadgeProps {
+    name: string;
     className?: string;
 }
 
 /**
- * SkillCard component displays a single skill with icon and name
+ * TechBadge component displays a technology with icon and name
  * Compact pill-style with brand-colored icons
+ * Used for displaying tech stacks in projects, skills, and experiences
  */
-export function SkillCard({ skill, className }: SkillCardProps) {
-    const { icon: Icon, color: iconColor } = getIconConfig(skill.name);
+export function TechBadge({ name, className }: TechBadgeProps) {
+    const { icon: Icon, color: iconColor } = getIconConfig(name);
 
     return (
         <span
@@ -26,7 +26,7 @@ export function SkillCard({ skill, className }: SkillCardProps) {
             )}
         >
             {Icon && <Icon className="w-4 h-4 shrink-0" style={{ color: iconColor }} />}
-            <span>{skill.name}</span>
+            <span>{name}</span>
         </span>
     );
 }

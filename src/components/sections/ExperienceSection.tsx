@@ -8,7 +8,7 @@ interface ExperienceSectionProps {
 
 export function ExperienceSection({ className }: ExperienceSectionProps) {
     return (
-        <section className={cn('py-8', className)} aria-labelledby="experience-heading">
+        <section className={cn('py-12', className)} aria-labelledby="experience-heading">
             <h2 id="experience-heading" className="section-title">
                 Experience
             </h2>

@@ -1,8 +1,8 @@
 import type { AnchorHTMLAttributes } from 'react';
 import { forwardRef } from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 import type { SocialPlatform } from '@/types';
 import { cn } from '@/lib/utils';
+import { getSocialIcon } from '@/lib/iconConfig';
 
 interface SocialIconProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
     platform: SocialPlatform;
@@ -10,20 +10,13 @@ interface SocialIconProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
     label: string;
 }
 
-const platformIcons: Record<SocialPlatform, typeof FaGithub> = {
-    github: FaGithub,
-    linkedin: FaLinkedin,
-    twitter: FaTwitter,
-    email: FaEnvelope,
-};
-
 /**
  * Social media icon link component
  * Renders appropriate icon based on platform with hover effects
  */
 export const SocialIcon = forwardRef<HTMLAnchorElement, SocialIconProps>(
     ({ platform, href, label, className, ...props }, ref) => {
-        const Icon = platformIcons[platform];
+        const Icon = getSocialIcon(platform);
 
         return (
             <a

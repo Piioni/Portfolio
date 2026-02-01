@@ -1,26 +1,9 @@
 import { SKILL_GROUPS } from '@/data';
-import { SkillCard, Bubble } from '@/components/ui';
+import { SkillBubble } from '@/components/compound';
 import { cn } from '@/lib/utils';
-import type { SkillGroup } from '@/types';
 
 interface SkillsSectionProps {
     className?: string;
-}
-
-function SkillBubble({ group }: { group: SkillGroup }) {
-    return (
-        <Bubble>
-            {/* Category label */}
-            <h3 className="text-xs font-semibold text-accent-lavender uppercase tracking-wider mb-3">{group.label}</h3>
-
-            {/* Skills as flex-wrap pills */}
-            <div className="flex flex-wrap gap-2">
-                {group.skills.map((skill) => (
-                    <SkillCard key={skill.id} skill={skill} />
-                ))}
-            </div>
-        </Bubble>
-    );
 }
 
 /**
@@ -36,7 +19,7 @@ export function SkillsSection({ className }: SkillsSectionProps) {
     );
 
     return (
-        <section className={cn('py-8', className)} aria-labelledby="skills-heading">
+        <section className={cn('py-12', className)} aria-labelledby="skills-heading">
             <h2 id="skills-heading" className="section-title">
                 Skills
             </h2>

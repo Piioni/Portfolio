@@ -1,6 +1,6 @@
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import type { Project } from '@/types';
-import { Bubble, SkillCard } from '@/components/ui';
+import { Bubble, TechBadge } from '@/components/ui';
 import { cn } from '@/lib/utils';
 
 interface ProjectCardProps {
@@ -23,18 +23,10 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
             {/* Description */}
             <p className="text-muted text-sm mb-4 grow">{project.description}</p>
 
-            {/* Technologies using SkillCard */}
+            {/* Technologies using TechBadge */}
             <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech) => (
-                    <SkillCard
-                        key={tech}
-                        skill={{
-                            id: tech.toLowerCase(),
-                            name: tech,
-                            icon: tech,
-                            category: 'frontend',
-                        }}
-                    />
+                    <TechBadge key={tech} name={tech} />
                 ))}
             </div>
 

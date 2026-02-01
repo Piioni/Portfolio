@@ -8,5 +8,6 @@ export interface Experience {
     readonly startDate: string;
     readonly endDate?: string;
     readonly description: string;
+    readonly highlights?: readonly string[];
     readonly technologies: readonly string[];
 }

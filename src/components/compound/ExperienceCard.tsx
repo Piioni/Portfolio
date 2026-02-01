@@ -36,14 +36,21 @@ export function ExperienceCard({ experience, className }: ExperienceCardProps) {
             <div className="ml-4">
                 {/* Date range */}
                 <span className="text-xs font-medium text-accent-lavender uppercase tracking-wider">{dateRange}</span>
-
                 {/* Role and company */}
                 <h3 className="mt-1 text-lg font-semibold text-primary">{experience.role}</h3>
                 <p className="text-sm text-muted">{experience.company}</p>
-
                 {/* Description */}
                 <p className="mt-3 text-sm text-muted leading-relaxed">{experience.description}</p>
-
+                {/* Highlights */}
+                {experience.highlights && experience.highlights.length > 0 && (
+                    <ul className="mt-4 space-y-0.5 list-disc list-inside pl-2">
+                        {experience.highlights.map((highlight, index) => (
+                            <li key={index} className="text-sm text-muted leading-relaxed">
+                                {highlight}
+                            </li>
+                        ))}
+                    </ul>
+                )}
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mt-3">
                     {experience.technologies.map((tech) => (

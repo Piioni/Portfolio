@@ -17,14 +17,15 @@ import {
     SiApple,
     SiVite,
     SiPostgresql,
-    SiVscodium,
     SiApache,
     SiExpress,
     SiLinkedin,
     SiPython,
     SiBun,
     SiArchlinux,
+    SiVim,
 } from 'react-icons/si';
+
 import {
     FaJava,
     FaWindows,
@@ -80,7 +81,7 @@ export const TECH_ICONS: Record<string, IconConfig> = {
     git: { icon: SiGit, color: '#F05032' },
     github: { icon: SiGithub, color: '#ffffff' },
     docker: { icon: SiDocker, color: '#2496ED' },
-    vscode: { icon: SiVscodium, color: '#007ACC' },
+    'vim motions': { icon: SiVim, color: '#019733' },
     apache: { icon: SiApache, color: '#D22128' },
 
     // OS

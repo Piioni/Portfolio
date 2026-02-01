@@ -41,7 +41,7 @@ export const SKILL_GROUPS: readonly SkillGroup[] = [
             { id: 'git', name: 'Git', icon: 'SiGit', category: 'devtools' },
             { id: 'github', name: 'GitHub', icon: 'SiGithub', category: 'devtools' },
             { id: 'docker', name: 'Docker', icon: 'SiDocker', category: 'devtools' },
-            { id: 'vscode', name: 'VsCode', icon: 'SiVscodium', category: 'devtools' },
+            { id: 'vim', name: 'Vim Motions', icon: 'SiVim', category: 'devtools' },
         ],
     },
     {

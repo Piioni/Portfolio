@@ -5,11 +5,7 @@
    ============================================ */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ============================================
-   Theme Configuration
-   ============================================ */
 @theme {
-    /* === COLORS === */
     --color-background-dark: #1e1e1e;
     --color-background-light: #fafafa;
 
@@ -19,7 +15,6 @@
     --color-surface-dark: #252525;
     --color-surface-light: #ffffff;
 
-    /* Bubble backgrounds (semi-transparent) */
     --color-bubble-dark: rgba(37, 37, 37, 0.92);
     --color-bubble-light: rgba(255, 255, 255, 0.92);
 
@@ -31,60 +26,26 @@
     --color-text-muted-dark: #a1a1aa;
     --color-text-muted-light: #71717a;
 
-    /* === TYPOGRAPHY === */
     --font-mono:
         'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono',
         monospace;
 
-    /* === SHADOWS === */
     --shadow-glow-lavender: 0 0 20px oklch(0.72 0.12 290 / 0.3);
 
-    /* === TRANSITIONS === */
     --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ============================================
-   Base Styles
-   ============================================ */
 html {
-    font-family: var(--font-mono);
-    scroll-behavior: smooth;
+    @apply font-mono scroll-smooth;
 }
 
 body {
-    margin: 0;
-    min-height: 100vh;
+    @apply m-0 min-h-screen;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Fixed background grid pattern - subtle decoration */
-.background-pattern {
-    background-image:
-        linear-gradient(90deg, hsla(0, 0%, 100%, 0.035) 1px, transparent 0),
-        linear-gradient(180deg, hsla(0, 0%, 100%, 0.035) 1px, transparent 0);
-    background-size: 20px 20px;
-    height: 100%;
-    left: 0;
-    pointer-events: none;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 0;
-}
-
-/* Light mode background grid */
-html:not(.dark) .background-pattern {
-    background-image:
-        linear-gradient(90deg, hsla(0, 0%, 0%, 0.035) 1px, transparent 0),
-        linear-gradient(180deg, hsla(0, 0%, 0%, 0.035) 1px, transparent 0);
-}
-
-/* ============================================
-   Custom Component Classes
-   ============================================ */
 @layer components {
-    /* Section title - accent color */
     .section-title {
         @apply text-2xl font-bold text-accent-lavender mb-6;
     }
@@ -126,9 +87,6 @@ html:not(.dark) .background-pattern {
     }
 }
 
-/* ============================================
-   Focus Styles for Accessibility
-   ============================================ */
 @layer utilities {
     .focus-ring {
         outline: none;
@@ -138,4 +96,26 @@ html:not(.dark) .background-pattern {
         outline: 2px solid var(--color-accent-lavender);
         outline-offset: 2px;
     }
+}
+
+/* Fixed background grid pattern */
+.background-pattern {
+    background-image:
+        linear-gradient(90deg, hsla(0, 0%, 100%, 0.035) 1px, transparent 0),
+        linear-gradient(180deg, hsla(0, 0%, 100%, 0.035) 1px, transparent 0);
+    background-size: 20px 20px;
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+/* Light mode background grid */
+html:not(.dark) .background-pattern {
+    background-image:
+        linear-gradient(90deg, hsla(0, 0%, 0%, 0.035) 1px, transparent 0),
+        linear-gradient(180deg, hsla(0, 0%, 0%, 0.035) 1px, transparent 0);
 }

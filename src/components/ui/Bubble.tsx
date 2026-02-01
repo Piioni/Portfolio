@@ -27,18 +27,6 @@ const variantStyles: Record<BubbleVariant, string> = {
  * - Skill category groups
  * - Project cards
  * - Blog post previews
- *
- * @example
- * // Basic bubble
- * <Bubble>Content here</Bubble>
- *
- * // Hero variant with larger padding
- * <Bubble variant="hero">Hero content</Bubble>
- *
- * // Clickable project card
- * <Bubble variant="card" hoverable as="article">
- *   <h3>Project Title</h3>
- * </Bubble>
  */
 export function Bubble({
     children,

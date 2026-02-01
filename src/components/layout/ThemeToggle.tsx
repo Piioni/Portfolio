@@ -28,7 +28,7 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
                 className
             )}
         >
-            {resolvedTheme === 'dark' ? <FaSun className="w-5 h-5" /> : <FaMoon className="w-5 h-5" />}
+            {resolvedTheme === 'dark' ? <FaSun className="size-5" /> : <FaMoon className="size-5" />}
         </button>
     );
 }

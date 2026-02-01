@@ -8,7 +8,6 @@ interface TechBadgeProps {
 
 /**
  * TechBadge component displays a technology with icon and name
- * Compact pill-style with brand-colored icons
  * Used for displaying tech stacks in projects, skills, and experiences
  */
 export function TechBadge({ name, className }: TechBadgeProps) {

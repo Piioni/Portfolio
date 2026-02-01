@@ -5,11 +5,8 @@ type BubbleVariant = 'default' | 'hero' | 'card';
 
 interface BubbleProps extends HTMLAttributes<HTMLDivElement> {
     children: ReactNode;
-    /** Visual variant affecting padding and behavior */
     variant?: BubbleVariant;
-    /** Enable hover animation (scale + border glow) - useful for clickable cards */
     hoverable?: boolean;
-    /** HTML element to render as */
     as?: 'div' | 'article' | 'section';
 }
 

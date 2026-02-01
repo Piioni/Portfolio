@@ -20,7 +20,6 @@ export function Navbar() {
         <header
             className={cn(
                 'fixed top-0 left-0 right-0 z-50',
-                'bg-background-light/80 dark:bg-background-dark/80',
                 'backdrop-blur-md',
                 'border-b border-border-light dark:border-border-dark'
             )}

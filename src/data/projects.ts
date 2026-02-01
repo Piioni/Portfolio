@@ -7,8 +7,8 @@ export const PROJECTS: readonly Project[] = [
         description:
             'A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features dark/light theme toggle and smooth animations.',
         technologies: ['React', 'TypeScript', 'TailwindCSS', 'Vite'],
-        githubUrl: 'https://github.com/username/portfolio',
-        liveUrl: 'https://portfolio.dev',
+        githubUrl: 'https://github.com/Piioni/Portfolio',
+        liveUrl: 'https://piioni.github.io/Portfolio',
         featured: true,
     },
     {
@@ -16,7 +16,7 @@ export const PROJECTS: readonly Project[] = [
         title: 'Pegasus Medical Supply Tracker',
         description:
             'A web application for tracking medical supplies across multiple hospitals, featuring role-based access control and real-time inventory updates.',
-        technologies: ['NestJS', 'MongoDB', 'Socket.io', 'Stripe'],
+        technologies: ['docker', 'php', 'mysql', 'javascript'],
         githubUrl: 'https://github.com/Piioni/Pegasus-Medical-WebPage',
         featured: true,
     },

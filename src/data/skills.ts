@@ -5,10 +5,12 @@ export const SKILL_GROUPS: readonly SkillGroup[] = [
         category: 'frontend',
         label: 'FrontEnd',
         skills: [
-            { id: 'html', name: 'HTML', icon: 'SiHtml5', category: 'frontend' },
+            { id: 'html', name: 'Html', icon: 'SiHtml5', category: 'frontend' },
+            { id: 'javascript', name: 'JavaScript', icon: 'SiJavascript', category: 'frontend' },
             { id: 'typescript', name: 'TypeScript', icon: 'SiTypescript', category: 'frontend' },
             { id: 'react', name: 'React', icon: 'SiReact', category: 'frontend' },
             { id: 'tailwindcss', name: 'TailwindCSS', icon: 'SiTailwindcss', category: 'frontend' },
+            { id: 'vite', name: 'Vite', icon: 'SiVite', category: 'frontend' },
         ],
     },
     {
@@ -17,7 +19,10 @@ export const SKILL_GROUPS: readonly SkillGroup[] = [
         skills: [
             { id: 'nestjs', name: 'NestJS', icon: 'SiNestjs', category: 'backend' },
             { id: 'laravel', name: 'Laravel', icon: 'SiLaravel', category: 'backend' },
+            { id: 'python', name: 'Python', icon: 'SiPython', category: 'backend' },
             { id: 'java', name: 'Java', icon: 'FaJava', category: 'backend' },
+            { id: 'php', name: 'Php', icon: 'SiPhp', category: 'backend' },
+            { id: 'bunjs', name: 'Bun', icon: 'SiBun', category: 'backend' },
         ],
     },
     {
@@ -25,7 +30,8 @@ export const SKILL_GROUPS: readonly SkillGroup[] = [
         label: 'Database',
         skills: [
             { id: 'mongodb', name: 'MongoDB', icon: 'SiMongodb', category: 'database' },
-            { id: 'sql', name: 'SQL', icon: 'SiMysql', category: 'database' },
+            { id: 'mysql', name: 'MySql', icon: 'SiMysql', category: 'database' },
+            { id: 'postgresql', name: 'PostgreSQL', icon: 'SiPostgresql', category: 'database' },
         ],
     },
     {
@@ -35,13 +41,14 @@ export const SKILL_GROUPS: readonly SkillGroup[] = [
             { id: 'git', name: 'Git', icon: 'SiGit', category: 'devtools' },
             { id: 'github', name: 'GitHub', icon: 'SiGithub', category: 'devtools' },
             { id: 'docker', name: 'Docker', icon: 'SiDocker', category: 'devtools' },
-            { id: 'vscode', name: 'VS Code', icon: 'SiVscodium', category: 'devtools' },
+            { id: 'vscode', name: 'VsCode', icon: 'SiVscodium', category: 'devtools' },
         ],
     },
     {
         category: 'os',
         label: 'Operating Systems',
         skills: [
+            { id: 'archlinux', name: 'Arch', icon: 'SiArchlinux', category: 'os' },
             { id: 'linux', name: 'Linux', icon: 'SiLinux', category: 'os' },
             { id: 'windows', name: 'Windows', icon: 'SiWindows', category: 'os' },
             { id: 'mac', name: 'Mac', icon: 'SiApple', category: 'os' },

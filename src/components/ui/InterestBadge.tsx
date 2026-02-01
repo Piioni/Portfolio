@@ -1,15 +1,17 @@
 import { cn } from '@/lib/utils';
+import { getInterestIcon } from '@/lib/iconConfig';
 
-interface InterestTagProps {
+interface InterestBadgeProps {
     label: string;
-    emoji?: string;
     className?: string;
 }
 
 /**
- * InterestTag component for displaying personal interests/hobbies
+ * InterestBadge component for displaying personal interests/hobbies
  */
-export function InterestTag({ label, emoji, className }: InterestTagProps) {
+export function InterestBadge({ label, className }: InterestBadgeProps) {
+    const { icon: Icon, color: iconColor } = getInterestIcon(label);
+
     return (
         <span
             className={cn(
@@ -21,7 +23,7 @@ export function InterestTag({ label, emoji, className }: InterestTagProps) {
                 className
             )}
         >
-            {emoji && <span>{emoji}</span>}
+            {Icon && <Icon className="w-4 h-4 shrink-0" style={{ color: iconColor }} />}
             <span>{label}</span>
         </span>
     );

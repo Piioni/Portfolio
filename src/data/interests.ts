@@ -1,10 +1,9 @@
 export const INTERESTS = [
-    { label: 'Open Source', emoji: '💻' },
-    { label: 'Linux', emoji: '🐧' },
-    { label: 'Reading', emoji: '📚' },
-    { label: 'Movies', emoji: '🎬' },
-    { label: 'Drawing', emoji: '🎨' },
-    { label: 'Music', emoji: '🎵' },
-    { label: 'Coffee', emoji: '☕' },
-    { label: 'Gaming', emoji: '🎮' },
+    { label: 'Open Source' },
+    { label: 'Linux' },
+    { label: 'Reading' },
+    { label: 'Movies' },
+    { label: 'Music' },
+    { label: 'Coffee' },
+    { label: 'Gaming' },
 ] as const;

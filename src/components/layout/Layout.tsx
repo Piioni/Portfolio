@@ -22,7 +22,7 @@ export function Layout() {
 
             <Navbar />
 
-            <main className="grow pt-20 pb-8">
+            <main className="grow pt-30 pb-8">
                 <Outlet />
             </main>
 

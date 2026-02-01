@@ -9,7 +9,7 @@ interface ExperienceCardProps {
 
 /**
  * ExperienceCard component displays a single work experience entry
- * Designed to be used within a Timeline component
+ * Used within ExperienceSection to list professional experiences
  */
 export function ExperienceCard({ experience, className }: ExperienceCardProps) {
     const dateRange = formatDateRange(experience.startDate, experience.endDate);
@@ -19,9 +19,8 @@ export function ExperienceCard({ experience, className }: ExperienceCardProps) {
             className={cn(
                 'relative pl-6 pb-8 last:pb-0',
                 // Timeline line
-                'before:absolute before:left-0 before:top-2 before:bottom-0 before:w-px',
-                'before:bg-border-light dark:before:bg-border-dark',
-                'last:before:hidden',
+                'before:absolute before:left-0 before:top-3 before:bottom-0 before:w-0.75',
+                'before:bg-border-light dark:before:bg-accent-lavender/25',
                 className
             )}
         >

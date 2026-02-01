@@ -12,11 +12,10 @@ interface SocialIconProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
 /**
  * Social media icon link component
- * Renders appropriate icon based on platform with hover effects
  */
 export const SocialIcon = forwardRef<HTMLAnchorElement, SocialIconProps>(
     ({ platform, href, label, className, ...props }, ref) => {
-        const Icon = getSocialIcon(platform);
+        const IconComponent = getSocialIcon(platform);
 
         return (
             <a
@@ -36,7 +35,7 @@ export const SocialIcon = forwardRef<HTMLAnchorElement, SocialIconProps>(
                 )}
                 {...props}
             >
-                <Icon className="w-5 h-5" />
+                {IconComponent({ className: 'w-5 h-5' })}
             </a>
         );
     }

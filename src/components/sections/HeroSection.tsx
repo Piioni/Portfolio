@@ -1,14 +1,9 @@
 import profile_picture from '@/assets/rei.webp';
 import { Avatar, Bubble } from '@/components/ui';
-import { cn } from '@/lib/utils';
 
-interface HeroSectionProps {
-    className?: string;
-}
-
-export function HeroSection({ className }: HeroSectionProps) {
+export function HeroSection() {
     return (
-        <section className={cn('py-8 md:py-12', className)} aria-labelledby="hero-heading">
+        <section aria-labelledby="hero-heading">
             <h2 className="section-title">Me, Myself and I</h2>
 
             <Bubble variant="hero">
@@ -46,6 +41,18 @@ export function HeroSection({ className }: HeroSectionProps) {
                                 Tidal profile
                             </a>
                             .
+                        </p>
+
+                        <p className="text-muted text-sm">
+                            You can find my resume here:{' '}
+                            <a
+                                href="/resume.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-accent-lavender font-medium hover:underline"
+                            >
+                                Resume PDF
+                            </a>
                         </p>
                     </div>
                 </div>

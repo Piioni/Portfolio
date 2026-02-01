@@ -6,11 +6,6 @@ interface SkillsSectionProps {
     className?: string;
 }
 
-/**
- * SkillsSection displays technical skills in a 2-row layout
- * Row 1: Frontend + Backend (larger categories)
- * Row 2: Database + Dev Tools + OS (smaller categories)
- */
 export function SkillsSection({ className }: SkillsSectionProps) {
     // Separate groups into rows
     const topRow = SKILL_GROUPS.filter((g) => g.category === 'frontend' || g.category === 'backend');

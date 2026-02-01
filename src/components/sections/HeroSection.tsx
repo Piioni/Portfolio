@@ -12,7 +12,7 @@ export function HeroSection() {
 
                     <div className="space-y-3">
                         <h1 id="hero-heading" className="text-2xl md:text-3xl font-bold text-primary">
-                            Hi! I am <span className="text-accent-lavender">Piioni</span>
+                            Hi! I am <span className="text-accent-lavender">Juan ツ</span>
                         </h1>
 
                         <p className="text-muted max-w-2xl leading-relaxed">

@@ -20,7 +20,7 @@ export function ExperienceCard({ experience, className }: ExperienceCardProps) {
                 'relative pl-6 pb-8 last:pb-0',
                 // Timeline line
                 'before:absolute before:left-0 before:top-3 before:bottom-0 before:w-0.75',
-                'before:bg-border-light dark:before:bg-accent-lavender/25',
+                'before:bg-text-primary-light/27 dark:before:bg-accent-lavender/25',
                 className
             )}
         >

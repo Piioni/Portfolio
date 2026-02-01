@@ -29,7 +29,7 @@ export function Footer({ className }: FooterProps) {
                     </div>
 
                     <p className="text-sm text-text-muted-light dark:text-text-muted-dark">
-                        Piioni &copy; {currentYear}. All rights reserved.
+                        Juan Rangel &copy; {currentYear}. All rights reserved.
                     </p>
                 </div>
             </Container>

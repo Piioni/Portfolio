@@ -14,7 +14,9 @@ export function SkillBubble({ group }: SkillBubbleProps) {
     return (
         <Bubble>
             {/* Category label */}
-            <h3 className="text-xs font-semibold text-accent-lavender uppercase tracking-wider mb-3">{group.label}</h3>
+            <h3 className="text-xs font-semibold text-accent-lavender-light dark:text-accent-lavender-dark uppercase tracking-wider mb-3">
+                {group.label}
+            </h3>
 
             {/* Skills as flex-wrap pills */}
             <div className="flex flex-wrap gap-2">

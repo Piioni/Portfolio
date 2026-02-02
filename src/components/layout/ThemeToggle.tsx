@@ -22,9 +22,9 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
                 'inline-flex items-center justify-center',
                 'w-10 h-10 rounded-lg',
                 'text-text-muted-light dark:text-text-muted-dark',
-                'hover:text-accent-lavender hover:bg-accent-lavender/10',
+                'hover:text-accent-lavender-light dark:hover:text-accent-lavender-dark hover:bg-accent-lavender-light/10 dark:hover:bg-accent-lavender-dark/10',
                 'transition-all duration-300 ease-smooth',
-                'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-lavender',
+                'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-lavender-light dark:focus-visible:ring-accent-lavender-dark',
                 className
             )}
         >

@@ -29,7 +29,7 @@ export function Navbar() {
                     {/* Logo / Home Link */}
                     <Link
                         to="/"
-                        className="text-xl font-bold text-accent-lavender hover:text-accent-lavender/80 transition-colors"
+                        className="text-xl font-bold text-accent-lavender-light dark:text-accent-lavender-dark hover:text-accent-lavender-light/80 dark:hover:text-accent-lavender-dark/80 transition-colors"
                     >
                         <span>{'<Dev/>'}</span>
                     </Link>
@@ -46,7 +46,7 @@ export function Navbar() {
                                         className={cn(
                                             'px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300',
                                             isActive
-                                                ? 'text-accent-lavender bg-accent-lavender/10'
+                                                ? 'text-accent-lavender-light dark:text-accent-lavender-dark bg-accent-lavender-light/10 dark:bg-accent-lavender-dark/10'
                                                 : 'text-text-muted-light dark:text-text-muted-dark hover:text-text-primary-light dark:hover:text-text-primary-dark hover:bg-surface-light dark:hover:bg-surface-dark'
                                         )}
                                     >
@@ -73,9 +73,9 @@ export function Navbar() {
                                 'inline-flex items-center justify-center',
                                 'w-10 h-10 rounded-lg',
                                 'text-text-muted-light dark:text-text-muted-dark',
-                                'hover:text-accent-lavender hover:bg-accent-lavender/10',
+                                'hover:text-accent-lavender-light dark:hover:text-accent-lavender-dark hover:bg-accent-lavender-light/10 dark:hover:bg-accent-lavender-dark/10',
                                 'transition-all duration-300 ease-smooth',
-                                'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-lavender'
+                                'focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-lavender-light dark:focus-visible:ring-accent-lavender-dark'
                             )}
                         >
                             {isMenuOpen ? <FaTimes className="size-5" /> : <FaBars className="size-5" />}
@@ -98,7 +98,7 @@ export function Navbar() {
                                             className={cn(
                                                 'block px-4 py-3 text-sm font-medium transition-all duration-300 border-l-4',
                                                 isActive
-                                                    ? 'text-accent-lavender bg-accent-lavender/10 border-accent-lavender'
+                                                    ? 'text-accent-lavender-light dark:text-accent-lavender-dark bg-accent-lavender-light/10 dark:bg-accent-lavender-dark/10 border-accent-lavender-light dark:border-accent-lavender-dark'
                                                     : 'text-text-muted-light dark:text-text-muted-dark border-transparent hover:text-text-primary-light dark:hover:text-text-primary-dark hover:bg-surface-light dark:hover:bg-surface-dark'
                                             )}
                                         >

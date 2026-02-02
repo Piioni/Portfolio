@@ -27,9 +27,9 @@ export const Avatar = forwardRef<HTMLImageElement, AvatarProps>(
             <div
                 className={cn(
                     'relative overflow-hidden rounded-full',
-                    'border-2 border-accent-lavender/30',
+                    'border-2 border-accent-lavender-light/30 dark:border-accent-lavender-dark/30',
                     'transition-all duration-300 ease-smooth',
-                    'hover:border-accent-lavender hover:shadow-glow-lavender',
+                    'hover:border-accent-lavender-light dark:hover:border-accent-lavender-dark hover:shadow-[0_0_20px_oklch(0.6_0.18_290/0.4)] dark:hover:shadow-[0_0_20px_oklch(0.72_0.12_290/0.3)]',
                     'hover:scale-110 hover:rotate-3',
                     sizeStyles[size],
                     className

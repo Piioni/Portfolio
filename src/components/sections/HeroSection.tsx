@@ -12,7 +12,8 @@ export function HeroSection() {
 
                     <div className="space-y-3">
                         <h1 id="hero-heading" className="text-2xl md:text-3xl font-bold text-primary">
-                            Hi! I am <span className="text-accent-lavender">Juan ツ</span>
+                            Hi! I am{' '}
+                            <span className="text-accent-lavender-light dark:text-accent-lavender-dark">Juan ツ</span>
                         </h1>
 
                         <p className="text-muted max-w-2xl leading-relaxed">
@@ -20,9 +21,19 @@ export function HeroSection() {
                         </p>
 
                         <p className="text-muted text-sm">
-                            My main tech stack is <span className="text-accent-lavender font-medium">React</span>,{' '}
-                            <span className="text-accent-lavender font-medium">TypeScript</span> and{' '}
-                            <span className="text-accent-lavender font-medium">Tailwind</span>.
+                            My main tech stack is{' '}
+                            <span className="text-accent-lavender-light dark:text-accent-lavender-dark font-medium">
+                                React
+                            </span>
+                            ,{' '}
+                            <span className="text-accent-lavender-light dark:text-accent-lavender-dark font-medium">
+                                TypeScript
+                            </span>{' '}
+                            and{' '}
+                            <span className="text-accent-lavender-light dark:text-accent-lavender-dark font-medium">
+                                Tailwind
+                            </span>
+                            .
                         </p>
 
                         <p className="text-muted text-sm">
@@ -36,7 +47,7 @@ export function HeroSection() {
                                 href="https://tidal.com/@piioni"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-accent-lavender font-medium hover:underline"
+                                className="text-accent-lavender-light dark:text-accent-lavender-dark font-medium hover:underline"
                             >
                                 Tidal profile
                             </a>
@@ -49,7 +60,7 @@ export function HeroSection() {
                                 href="/resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-accent-lavender font-medium hover:underline"
+                                className="text-accent-lavender-light dark:text-accent-lavender-dark font-medium hover:underline"
                             >
                                 Resume PDF
                             </a>

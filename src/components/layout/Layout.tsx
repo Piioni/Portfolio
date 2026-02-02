@@ -11,7 +11,7 @@ export function Layout() {
     return (
         <div
             className={cn(
-                'min-h-screen flex flex-col',
+                'w-screen h-screen flex flex-col overflow-y-auto',
                 'bg-background-light dark:bg-background-dark',
                 'text-primary',
                 'font-mono'

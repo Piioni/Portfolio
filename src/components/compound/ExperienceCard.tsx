@@ -20,7 +20,7 @@ export function ExperienceCard({ experience, className }: ExperienceCardProps) {
                 'relative pl-6 pb-8 last:pb-0',
                 // Timeline line
                 'before:absolute before:left-0 before:top-3 before:bottom-0 before:w-0.75',
-                'before:bg-text-primary-light/27 dark:before:bg-accent-lavender/25',
+                'before:bg-text-primary-light/27 dark:before:bg-accent-lavender-dark/25',
                 className
             )}
         >
@@ -28,14 +28,16 @@ export function ExperienceCard({ experience, className }: ExperienceCardProps) {
             <div
                 className={cn(
                     'absolute left-0 top-2 w-2.5 h-2.5 -translate-x-1/2 rounded-full',
-                    'bg-accent-lavender shadow-glow-lavender'
+                    'bg-accent-lavender-light dark:bg-accent-lavender-dark dark:shadow-[0_0_20px_oklch(0.72_0.12_290/0.3)] shadow-[0_0_20px_oklch(0.6_0.18_290/0.4)]'
                 )}
             />
 
             {/* Content */}
             <div className="ml-4">
                 {/* Date range */}
-                <span className="text-xs font-medium text-accent-lavender uppercase tracking-wider">{dateRange}</span>
+                <span className="text-xs font-medium text-accent-lavender-light dark:text-accent-lavender-dark uppercase tracking-wider">
+                    {dateRange}
+                </span>
                 {/* Role and company */}
                 <h3 className="mt-1 text-lg font-semibold text-primary">{experience.role}</h3>
                 <p className="text-sm text-muted">{experience.company}</p>

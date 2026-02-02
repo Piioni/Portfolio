@@ -4,7 +4,7 @@ export default function Blog() {
     return (
         <Container>
             <section>
-                <h1 className="text-3xl font-bold text-text-primary-light dark:text-accent-lavender mb-8">
+                <h1 className="text-3xl font-bold text-text-primary-light dark:text-accent-lavender-dark mb-8">
                     Blog Posts
                 </h1>
 

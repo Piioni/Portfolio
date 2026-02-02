@@ -6,18 +6,6 @@
     --color-background-dark: #1e1e1e;
     --color-background-light: #f5f1e8;
 
-    /* Dark mode: lavanda original claro */
-    --color-accent-lavender-dark: oklch(0.72 0.12 290);
-    --color-accent-lavender-hover-dark: oklch(0.78 0.14 290);
-
-    /* Light mode: lavanda más oscuro para contraste */
-    --color-accent-lavender-light: oklch(0.6 0.18 290);
-    --color-accent-lavender-hover-light: oklch(0.68 0.2 290);
-
-    /* Default to dark mode values */
-    --color-accent-lavender: var(--color-accent-lavender-dark);
-    --color-accent-lavender-hover: var(--color-accent-lavender-hover-dark);
-
     --color-surface-dark: #252525;
     --color-surface-light: #ebe6da;
 
@@ -32,35 +20,36 @@
     --color-text-muted-dark: #a1a1aa;
     --color-text-muted-light: #6b6860;
 
+    /* Accent lavender - light mode */
+    --color-accent-lavender-light: oklch(0.6 0.18 290);
+    --color-accent-lavender-hover-light: oklch(0.68 0.2 290);
+
+    /* Accent lavender - dark mode */
+    --color-accent-lavender-dark: oklch(0.72 0.12 290);
+    --color-accent-lavender-hover-dark: oklch(0.78 0.14 290);
+
     --font-mono:
         'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono',
         monospace;
 
-    --shadow-glow-lavender: 0 0 20px oklch(0.72 0.12 290 / 0.3);
-
     --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Override accent colors for light mode */
-html:not(.dark) {
-    --color-accent-lavender: var(--color-accent-lavender-light);
-    --color-accent-lavender-hover: var(--color-accent-lavender-hover-light);
-    --shadow-glow-lavender: 0 0 20px oklch(0.6 0.18 290 / 0.4);
-}
-
 html {
-    @apply font-mono scroll-smooth;
+    @apply font-mono scroll-smooth w-full h-full overflow-y-hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    @apply m-0 min-h-screen;
+    @apply m-0 w-full h-full overflow-hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 @layer components {
     .section-title {
-        @apply text-2xl font-bold text-accent-lavender mb-6;
+        @apply text-2xl font-bold text-accent-lavender-light dark:text-accent-lavender-dark mb-6;
     }
 
     /* Reusable text styles */
@@ -76,7 +65,7 @@ body {
     .link-muted {
         @apply flex items-center gap-1.5 text-sm;
         @apply text-text-muted-light dark:text-text-muted-dark;
-        @apply hover:text-accent-lavender transition-colors;
+        @apply hover:text-accent-lavender-light dark:hover:text-accent-lavender-dark transition-colors;
     }
 
     /* Surface backgrounds */
@@ -95,8 +84,8 @@ body {
     }
 
     .hover-glow:hover {
-        box-shadow: var(--shadow-glow-lavender);
-        border-color: var(--color-accent-lavender);
+        @apply dark:shadow-[0_0_20px_oklch(0.72_0.12_290/0.3)] shadow-[0_0_20px_oklch(0.6_0.18_290/0.4)];
+        @apply border-accent-lavender-light dark:border-accent-lavender-dark;
     }
 }
 
@@ -106,29 +95,21 @@ body {
     }
 
     .focus-ring:focus-visible {
-        outline: 2px solid var(--color-accent-lavender);
-        outline-offset: 2px;
+        @apply outline-2 outline-offset-2 outline-accent-lavender-light dark:outline-accent-lavender-dark;
     }
-}
 
-/* Fixed background grid pattern */
-.background-pattern {
-    background-image:
-        linear-gradient(90deg, hsla(0, 0%, 100%, 0.035) 1px, transparent 0),
-        linear-gradient(180deg, hsla(0, 0%, 100%, 0.035) 1px, transparent 0);
-    background-size: 20px 20px;
-    height: 100%;
-    left: 0;
-    pointer-events: none;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 0;
-}
+    /* Background grid pattern */
+    .background-pattern {
+        @apply fixed inset-0 pointer-events-none z-0;
+        background-image:
+            linear-gradient(90deg, hsla(35, 15%, 45%, 0.05) 1px, transparent 0),
+            linear-gradient(180deg, hsla(35, 15%, 45%, 0.05) 1px, transparent 0);
+        background-size: 20px 20px;
+    }
 
-/* Light mode background grid */
-html:not(.dark) .background-pattern {
-    background-image:
-        linear-gradient(90deg, hsla(35, 15%, 45%, 0.05) 1px, transparent 0),
-        linear-gradient(180deg, hsla(35, 15%, 45%, 0.05) 1px, transparent 0);
+    .dark .background-pattern {
+        background-image:
+            linear-gradient(90deg, hsla(0, 0%, 100%, 0.035) 1px, transparent 0),
+            linear-gradient(180deg, hsla(0, 0%, 100%, 0.035) 1px, transparent 0);
+    }
 }

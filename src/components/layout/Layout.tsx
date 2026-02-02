@@ -17,15 +17,12 @@ export function Layout() {
                 'font-mono'
             )}
         >
-            {/* Fixed background grid pattern */}
             <div className="background-pattern" aria-hidden="true" />
 
             <Navbar />
-
             <main className="grow pt-30 pb-8">
                 <Outlet />
             </main>
-
             <Footer />
         </div>
     );

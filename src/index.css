@@ -36,13 +36,18 @@
 }
 
 html {
-    @apply font-mono scroll-smooth w-full h-full overflow-y-hidden;
+    @apply font-mono scroll-smooth w-full;
+    @apply bg-background-light dark:bg-background-dark;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    padding-top: 100vh;
+    margin-top: -100vh;
 }
 
 body {
-    @apply m-0 w-full h-full overflow-hidden;
+    @apply m-0 w-full min-h-screen relative;
+    @apply bg-background-light dark:bg-background-dark;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -105,6 +110,9 @@ body {
             linear-gradient(90deg, hsla(35, 15%, 45%, 0.05) 1px, transparent 0),
             linear-gradient(180deg, hsla(35, 15%, 45%, 0.05) 1px, transparent 0);
         background-size: 20px 20px;
+        /* Extender hacia arriba para pull-to-refresh */
+        top: -100vh;
+        height: calc(100vh + 100%);
     }
 
     .dark .background-pattern {

@@ -1,31 +1,31 @@
 import { cn } from '@/lib/utils';
 import { getIconConfig } from '@/lib/iconConfig';
 
-interface TechBadgeProps {
-    name: string;
+interface BadgeProps {
+    label: string;
     className?: string;
 }
 
 /**
- * TechBadge component displays a technology with icon and name
- * Used for displaying tech stacks in projects, skills, and experiences
+ * Badge component displays a label with icon
+ * Used for displaying technologies, interests, and tags
  */
-export function TechBadge({ name, className }: TechBadgeProps) {
-    const { icon: Icon, color: iconColor } = getIconConfig(name);
+export function Badge({ label, className }: BadgeProps) {
+    const { icon: Icon, color: iconColor } = getIconConfig(label);
 
     return (
         <span
             className={cn(
-                'inline-flex items-center gap-2 px-3 py-1.5 rounded-full',
+                'inline-flex items-center gap-2 px-4 py-2 rounded-full',
                 'bg-surface border-themed',
                 'text-sm font-medium text-primary',
                 'transition-all duration-300 ease-smooth',
-                'hover:border-accent-lavender hover:scale-105',
+                'hover:border-accent-lavender-light dark:hover:border-accent-lavender-dark hover:scale-105',
                 className
             )}
         >
             {Icon && <Icon className="w-4 h-4 shrink-0" style={{ color: iconColor }} />}
-            <span>{name}</span>
+            <span>{label}</span>
         </span>
     );
 }

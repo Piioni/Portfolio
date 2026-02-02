@@ -1,4 +1,4 @@
-import { InterestBadge } from '@/components/ui';
+import { Badge } from '@/components/ui';
 import { cn } from '@/lib/utils';
 import { INTERESTS } from '@/data';
 
@@ -15,7 +15,7 @@ export function InterestsSection({ className }: InterestsSectionProps) {
 
             <div className="flex flex-wrap gap-3">
                 {INTERESTS.map((interest) => (
-                    <InterestBadge key={interest.label} label={interest.label} />
+                    <Badge key={interest.label} label={interest.label} />
                 ))}
             </div>
         </section>

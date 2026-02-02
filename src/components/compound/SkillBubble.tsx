@@ -1,6 +1,6 @@
 import type { SkillGroup } from '@/types';
 import { Bubble } from '@/components/ui';
-import { TechBadge } from '@/components/ui';
+import { Badge } from '@/components/ui';
 
 interface SkillBubbleProps {
     group: SkillGroup;
@@ -21,7 +21,7 @@ export function SkillBubble({ group }: SkillBubbleProps) {
             {/* Skills as flex-wrap pills */}
             <div className="flex flex-wrap gap-2">
                 {group.skills.map((skill) => (
-                    <TechBadge key={skill.id} name={skill.name} />
+                    <Badge key={skill.id} label={skill.name} />
                 ))}
             </div>
         </Bubble>

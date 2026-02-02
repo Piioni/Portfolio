@@ -1,5 +1,5 @@
 import type { Experience } from '@/types';
-import { TechBadge } from '@/components/ui';
+import { Badge } from '@/components/ui';
 import { formatDateRange, cn } from '@/lib/utils';
 
 interface ExperienceCardProps {
@@ -56,7 +56,7 @@ export function ExperienceCard({ experience, className }: ExperienceCardProps) {
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mt-3">
                     {experience.technologies.map((tech) => (
-                        <TechBadge key={tech} name={tech} />
+                        <Badge key={tech} label={tech} />
                     ))}
                 </div>
             </div>

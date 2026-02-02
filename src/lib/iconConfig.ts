@@ -49,9 +49,9 @@ export interface IconConfig {
 
 /**
  * Centralized icon configuration with brand colors
- * Maps technology names to their respective icons and colors
+ * Maps technology names, interests, and labels to their respective icons and colors
  */
-export const TECH_ICONS: Record<string, IconConfig> = {
+export const ICON_CONFIG: Record<string, IconConfig> = {
     // Frontend
     html: { icon: SiHtml5, color: '#E34F26' },
     css: { icon: SiCss3, color: '#1572B6' },
@@ -90,14 +90,9 @@ export const TECH_ICONS: Record<string, IconConfig> = {
     macos: { icon: SiApple, color: '#999999' },
     mac: { icon: SiApple, color: '#999999' },
     windows: { icon: FaWindows, color: '#0078D6' },
-};
 
-/**
- * Interest/hobby icon configuration with colors
- */
-export const INTEREST_ICONS: Record<string, IconConfig> = {
+    // Interests/Hobbies
     'open source': { icon: FaCode, color: '#61DAFB' },
-    linux: { icon: SiLinux, color: '#FCC624' },
     reading: { icon: FaBook, color: '#8B4513' },
     movies: { icon: FaFilm, color: '#FFD700' },
     drawing: { icon: FaPalette, color: '#FF6B6B' },
@@ -125,23 +120,13 @@ const DEFAULT_ICON_CONFIG: IconConfig = {
 };
 
 /**
- * Gets icon configuration for a technology
- * @param techName - Technology name (e.g., "React", "TypeScript", "react", "typescript")
+ * Gets icon configuration for any label (technology, interest, hobby, etc.)
+ * @param label - Label name (e.g., "React", "TypeScript", "Open Source", "Gaming")
  * @returns Icon configuration with icon component and color
  */
-export function getIconConfig(techName: string): IconConfig {
-    const normalizedName = techName.toLowerCase();
-    return TECH_ICONS[normalizedName] || DEFAULT_ICON_CONFIG;
-}
-
-/**
- * Gets interest icon configuration
- * @param interestName - Interest name (e.g., "Open Source", "Linux")
- * @returns Icon configuration with icon component and color
- */
-export function getInterestIcon(interestName: string): IconConfig {
-    const normalizedName = interestName.toLowerCase();
-    return INTEREST_ICONS[normalizedName] || DEFAULT_ICON_CONFIG;
+export function getIconConfig(label: string): IconConfig {
+    const normalizedName = label.toLowerCase();
+    return ICON_CONFIG[normalizedName] || DEFAULT_ICON_CONFIG;
 }
 
 /**

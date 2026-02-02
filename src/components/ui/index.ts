@@ -3,5 +3,4 @@ export { Button } from './Button';
 export { Avatar } from './Avatar';
 export { SocialIcon } from './SocialIcon';
 export { Bubble } from './Bubble';
-export { TechBadge } from './TechBadge';
-export { InterestBadge } from './InterestBadge';
+export { Badge } from './Badge';

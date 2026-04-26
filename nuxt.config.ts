@@ -30,6 +30,28 @@ export default defineNuxtConfig({
     storageKey: 'theme',
   },
 
+  icon: {
+    provider: 'server',
+    fallbackToApi: false,
+    serverBundle: {
+      collections: ['mdi', 'simple-icons'],
+    },
+    clientBundle: {
+      scan: true,
+      icons: [
+        'mdi:menu',
+        'mdi:close',
+        'mdi:white-balance-sunny',
+        'mdi:moon-waning-crescent',
+        'simple-icons:github',
+        'mdi:open-in-new',
+        'mdi:arrow-right',
+        'mdi:circle-outline',
+      ],
+      sizeLimitKb: 256,
+    },
+  },
+
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {

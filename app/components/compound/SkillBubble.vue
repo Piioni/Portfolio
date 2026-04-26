@@ -17,7 +17,7 @@ defineProps<Props>()
     </h3>
 
     <div class="flex flex-wrap gap-2">
-      <BaseBadge v-for="skill in group.skills" :key="skill.id" :label="skill.name" />
+      <BaseBadge v-for="skill in group.skills" :key="skill.id" :label="skill.name" :icon-id="skill.id" />
     </div>
   </BaseBubble>
 </template>

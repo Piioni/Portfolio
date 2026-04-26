@@ -45,7 +45,7 @@ useSeoMeta({
             rel="noopener noreferrer"
             class="link-muted"
           >
-            <Icon name="simple-icons:github" class="size-4" />
+            <Icon name="github" class="size-4" aria-hidden="true" />
             <span>Source Code</span>
           </a>
 
@@ -56,7 +56,7 @@ useSeoMeta({
             rel="noopener noreferrer"
             class="link-muted"
           >
-            <Icon name="mdi:open-in-new" class="size-4" />
+            <Icon name="ext" class="size-4" aria-hidden="true" />
             <span>Live Demo</span>
           </a>
         </div>

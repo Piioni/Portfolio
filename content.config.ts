@@ -84,6 +84,7 @@ export default defineContentConfig({
       source: 'portfolio/interests.yml',
       schema: z.object({
         items: z.array(z.object({
+          id: z.string().regex(SLUG_REGEX, 'id must be kebab-case'),
           label: z.string().min(1),
         })).min(1),
       }),

@@ -1,8 +1,15 @@
 items:
-  - label: Open Source
-  - label: Linux
-  - label: Reading
-  - label: Movies
-  - label: Music
-  - label: Coffee
-  - label: Gaming
+  - id: open-source
+    label: Open Source
+  - id: linux
+    label: Linux
+  - id: reading
+    label: Reading
+  - id: movies
+    label: Movies
+  - id: music
+    label: Music
+  - id: coffee
+    label: Coffee
+  - id: gaming
+    label: Gaming

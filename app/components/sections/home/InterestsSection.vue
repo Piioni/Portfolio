@@ -9,7 +9,7 @@ const { data: interests } = await useInterestsContent()
     </h2>
 
     <div class="flex flex-wrap gap-3">
-      <BaseBadge v-for="interest in interests" :key="interest.label" :label="interest.label" />
+      <BaseBadge v-for="interest in interests" :key="interest.id" :label="interest.label" :icon-id="interest.id" />
     </div>
   </section>
 </template>

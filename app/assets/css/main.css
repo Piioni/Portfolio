@@ -126,6 +126,42 @@ body {
     height: calc(100vh + 100%);
   }
 
+  .icon-tone-html { color: #e34f26; }
+  .icon-tone-css { color: #1572b6; }
+  .icon-tone-javascript { color: #f7df1e; }
+  .icon-tone-typescript { color: #3178c6; }
+  .icon-tone-react { color: #61dafb; }
+  .icon-tone-tailwindcss { color: #06b6d4; }
+  .icon-tone-vite { color: #646cff; }
+  .icon-tone-nestjs { color: #e0234e; }
+  .icon-tone-laravel { color: #ff2d20; }
+  .icon-tone-php { color: #777bb4; }
+  .icon-tone-python { color: #3776ab; }
+  .icon-tone-java { color: #ed8b00; }
+  .icon-tone-bun { color: #b4a280; }
+  .icon-tone-mongodb { color: #47a248; }
+  .icon-tone-mysql { color: #4479a1; }
+  .icon-tone-postgresql { color: #4169e1; }
+  .icon-tone-git { color: #f05032; }
+  .icon-tone-github { color: #999999; }
+  .icon-tone-docker { color: #2496ed; }
+  .icon-tone-vim { color: #019733; }
+  .icon-tone-archlinux { color: #1793d1; }
+  .icon-tone-linux { color: #fcc624; }
+  .icon-tone-windows { color: #0078d6; }
+  .icon-tone-mac { color: #999999; }
+  .icon-tone-nuxt { color: #00dc82; }
+  .icon-tone-nuxt-content { color: #00dc82; }
+  .icon-tone-vue { color: #42b883; }
+  .icon-tone-open-source { color: #61dafb; }
+  .icon-tone-reading { color: #8b4513; }
+  .icon-tone-movies { color: #ffd700; }
+  .icon-tone-music { color: #9b59b6; }
+  .icon-tone-coffee { color: #6f4e37; }
+  .icon-tone-gaming { color: #e74c3c; }
+  .icon-tone-concept { @apply text-accent-lavender-light dark:text-accent-lavender-dark; }
+  .icon-tone-muted { @apply text-text-muted-light dark:text-text-muted-dark; }
+
   .dark .background-pattern {
     background-image:
       linear-gradient(90deg, hsl(0 0% 100% / 3.5%) 1px, transparent 0),

@@ -41,5 +41,6 @@ export interface ExperienceItem {
 }
 
 export interface InterestItem {
+  id: string
   label: string
 }

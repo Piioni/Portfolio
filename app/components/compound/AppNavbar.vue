@@ -17,7 +17,7 @@ watch(() => route.path, closeMenu)
 
 <template>
   <header
-    class="fixed top-0 right-0 left-0 z-[60] border-b border-border-light bg-background-light/80 backdrop-blur-md dark:border-border-dark dark:bg-background-dark/80"
+    class="fixed top-0 right-0 left-0 z-60 border-b border-border-light bg-background-light/80 backdrop-blur-md dark:border-border-dark dark:bg-background-dark/80"
   >
     <BaseContainer>
       <nav class="flex h-16 items-center justify-between">
@@ -53,10 +53,10 @@ watch(() => route.path, closeMenu)
             type="button"
             :aria-label="isMenuOpen ? 'Close menu' : 'Open menu'"
             :aria-expanded="isMenuOpen"
-            class="focus-ring inline-flex size-10 items-center justify-center rounded-lg text-text-muted-light transition-all duration-300 ease-[var(--ease-smooth)] hover:bg-accent-lavender-light/10 hover:text-accent-lavender-light dark:text-text-muted-dark dark:hover:bg-accent-lavender-dark/10 dark:hover:text-accent-lavender-dark"
+            class="focus-ring inline-flex size-10 items-center justify-center rounded-lg text-text-muted-light transition-all duration-300 ease-(--ease-smooth) hover:bg-accent-lavender-light/10 hover:text-accent-lavender-light dark:text-text-muted-dark dark:hover:bg-accent-lavender-dark/10 dark:hover:text-accent-lavender-dark"
             @click="isMenuOpen = !isMenuOpen"
           >
-            <Icon :name="isMenuOpen ? 'mdi:close' : 'mdi:menu'" class="size-5" />
+            <Icon :name="isMenuOpen ? 'close' : 'menu'" class="size-5" aria-hidden="true" />
           </button>
         </div>
       </nav>

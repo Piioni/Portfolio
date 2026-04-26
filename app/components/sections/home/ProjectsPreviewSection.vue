@@ -11,7 +11,7 @@ const { data: projects } = await useFeaturedProjectsContent(3)
 
       <NuxtLink to="/projects" class="link-muted rounded-lg px-2 py-1 text-sm font-medium">
         <span>More projects</span>
-        <Icon name="mdi:arrow-right" class="size-4" />
+        <Icon name="arrow" class="size-4" aria-hidden="true" />
       </NuxtLink>
     </div>
 

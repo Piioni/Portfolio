@@ -33,7 +33,7 @@ defineProps<Props>()
         class="link-muted"
         :aria-label="`View ${project.title} on GitHub`"
       >
-        <Icon name="simple-icons:github" class="size-4" />
+        <Icon name="github" class="size-4" aria-hidden="true" />
         <span>Code</span>
       </a>
 
@@ -45,13 +45,13 @@ defineProps<Props>()
         class="link-muted"
         :aria-label="`View ${project.title} live demo`"
       >
-        <Icon name="mdi:open-in-new" class="size-4" />
+        <Icon name="ext" class="size-4" aria-hidden="true" />
         <span>Demo</span>
       </a>
 
       <NuxtLink :to="`/projects/${project.slug}`" class="link-muted ml-auto">
         <span>Details</span>
-        <Icon name="mdi:arrow-right" class="size-4" />
+        <Icon name="arrow" class="size-4" aria-hidden="true" />
       </NuxtLink>
     </div>
   </BaseBubble>

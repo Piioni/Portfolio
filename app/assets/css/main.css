@@ -81,7 +81,7 @@ body {
   }
 
   .hover-glow {
-    @apply transition-all duration-300 ease-[var(--ease-smooth)];
+    @apply transition-all duration-300 ease-(--ease-smooth);
   }
 
   .hover-glow:hover {

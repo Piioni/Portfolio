@@ -33,6 +33,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^8.2.0",
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/simple-icons": "^1.2.79",
     "eslint": "^10.2.1",
     "eslint-plugin-format": "^2.0.1",
     "typescript": "^6.0.3",

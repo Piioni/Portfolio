@@ -14,13 +14,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: '2024-04-03',
 
-  components: [
-    {
-      path: './app/components',
-      pathPrefix: true,
-    },
-  ],
-
   alias: {
     '@': fileURLToPath(new URL('./app', import.meta.url)),
   },
@@ -29,6 +22,12 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: [
+        '@vue/devtools-core',
+        '@vue/devtools-kit',
+      ],
+    },
   },
 
   eslint: {

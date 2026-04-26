@@ -1,0 +1,134 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background-dark: #1e1e1e;
+  --color-background-light: #f5f1e8;
+
+  --color-surface-dark: #252525;
+  --color-surface-light: #ebe6da;
+
+  --color-bubble-dark: rgb(37 37 37 / 92%);
+  --color-bubble-light: rgb(250 247 240 / 92%);
+
+  --color-border-dark: hsl(0 0% 100% / 10%);
+  --color-border-light: hsl(35 20% 60% / 20%);
+
+  --color-text-primary-dark: #e4e4e7;
+  --color-text-primary-light: #312528;
+  --color-text-muted-dark: #a1a1aa;
+  --color-text-muted-light: #6b6860;
+
+  --color-accent-lavender-light: oklch(0.6 0.18 290);
+  --color-accent-lavender-hover-light: oklch(0.68 0.2 290);
+  --color-accent-lavender-dark: oklch(0.72 0.12 290);
+  --color-accent-lavender-hover-dark: oklch(0.78 0.14 290);
+
+  --font-mono:
+    'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas,
+    'Liberation Mono', monospace;
+
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:root {
+  min-height: 100%;
+}
+
+html {
+  @apply font-mono scroll-smooth w-full;
+  @apply bg-background-light dark:bg-background-dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  padding-top: 100vh;
+  margin-top: -100vh;
+}
+
+body {
+  @apply m-0 w-full min-h-screen relative;
+  @apply bg-background-light dark:bg-background-dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .section-title {
+    @apply text-2xl font-bold text-accent-lavender-light dark:text-accent-lavender-dark mb-6;
+  }
+
+  .text-muted {
+    @apply text-text-muted-light dark:text-text-muted-dark;
+  }
+
+  .text-primary {
+    @apply text-text-primary-light dark:text-text-primary-dark;
+  }
+
+  .link-muted {
+    @apply flex items-center gap-1.5 text-sm;
+    @apply text-text-muted-light dark:text-text-muted-dark;
+    @apply hover:text-accent-lavender-light dark:hover:text-accent-lavender-dark transition-colors;
+  }
+
+  .bg-surface {
+    @apply bg-surface-light dark:bg-surface-dark;
+  }
+
+  .border-themed {
+    @apply border border-border-light dark:border-border-dark;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 ease-[var(--ease-smooth)];
+  }
+
+  .hover-glow:hover {
+    @apply shadow-[0_0_20px_oklch(0.6_0.18_290/0.4)] dark:shadow-[0_0_20px_oklch(0.72_0.12_290/0.3)];
+    @apply border-accent-lavender-light dark:border-accent-lavender-dark;
+  }
+}
+
+@layer utilities {
+  .focus-ring {
+    outline: none;
+  }
+
+  .focus-ring:focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent-lavender-light dark:outline-accent-lavender-dark;
+  }
+
+  @keyframes fade-scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95) translateY(-0.5rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .animate-fade-scale-in {
+    animation: fade-scale-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+  }
+
+  .background-pattern {
+    @apply fixed inset-0 pointer-events-none z-0;
+    background-image:
+      linear-gradient(90deg, hsl(35 15% 45% / 5%) 1px, transparent 0),
+      linear-gradient(180deg, hsl(35 15% 45% / 5%) 1px, transparent 0);
+    background-size: 20px 20px;
+    top: -100vh;
+    height: calc(100vh + 100%);
+  }
+
+  .dark .background-pattern {
+    background-image:
+      linear-gradient(90deg, hsl(0 0% 100% / 3.5%) 1px, transparent 0),
+      linear-gradient(180deg, hsl(0 0% 100% / 3.5%) 1px, transparent 0);
+  }
+}

@@ -1,7 +1,6 @@
 import { fileURLToPath } from 'node:url'
 import tailwindcss from '@tailwindcss/vite'
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
@@ -15,22 +14,20 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: '2024-04-03',
 
-
-   components: [
+  components: [
     {
-      path: '~/components',
+      path: './app/components',
       pathPrefix: true,
     },
   ],
 
-
   alias: {
     '@': fileURLToPath(new URL('./app', import.meta.url)),
-    },
+  },
 
-    css: ['./app/assets/css/main.css'],
+  css: ['./app/assets/css/main.css'],
 
-      vite: {
+  vite: {
     plugins: [tailwindcss()],
   },
 

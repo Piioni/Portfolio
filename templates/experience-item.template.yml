@@ -1,0 +1,14 @@
+- id: experiencia-id
+  company: Nombre de empresa
+  role: Rol
+  startDate: 2025-01
+  endDate: 2025-12
+  description: Descripción breve del rol y responsabilidad
+  highlights:
+    - Logro o responsabilidad clave 1
+    - Logro o responsabilidad clave 2
+  technologies:
+    - id: php
+      label: PHP
+    - id: docker
+      label: Docker

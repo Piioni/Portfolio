@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { INTERESTS } from '@/data/site'
+const { data: interests } = await useInterestsContent()
 </script>
 
 <template>
@@ -9,7 +9,7 @@ import { INTERESTS } from '@/data/site'
     </h2>
 
     <div class="flex flex-wrap gap-3">
-      <BaseBadge v-for="interest in INTERESTS" :key="interest.label" :label="interest.label" />
+      <BaseBadge v-for="interest in interests" :key="interest.label" :label="interest.label" />
     </div>
   </section>
 </template>

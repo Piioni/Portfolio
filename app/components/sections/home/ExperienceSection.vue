@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { EXPERIENCES } from '@/data/site'
+const { data: experiences } = await useExperiencesContent()
 </script>
 
 <template>
@@ -9,7 +9,7 @@ import { EXPERIENCES } from '@/data/site'
     </h2>
 
     <div class="relative">
-      <CompoundExperienceCard v-for="experience in EXPERIENCES" :key="experience.id" :experience="experience" />
+      <CompoundExperienceCard v-for="experience in experiences" :key="experience.id" :experience="experience" />
     </div>
   </section>
 </template>

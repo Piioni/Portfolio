@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { NAV_LINKS, SOCIAL_LINKS } from '@/data/site'
+const NAV_LINKS = [
+  { label: 'Home', href: '/' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Blog', href: '/blog' },
+] as const
 
 const route = useRoute()
 const isMenuOpen = ref(false)
@@ -40,13 +44,6 @@ watch(() => route.path, closeMenu)
         </ul>
 
         <div class="hidden items-center gap-1 md:flex">
-          <BaseSocialIcon
-            v-for="social in SOCIAL_LINKS"
-            :key="social.id"
-            :platform="social.platform"
-            :href="social.url"
-            :label="social.label"
-          />
           <CompoundThemeToggle />
         </div>
 
@@ -107,16 +104,6 @@ watch(() => route.path, closeMenu)
             </span>
           </BaseBubble>
         </NuxtLink>
-
-        <div class="mt-1 flex items-center gap-1">
-          <BaseSocialIcon
-            v-for="social in SOCIAL_LINKS"
-            :key="social.id"
-            :platform="social.platform"
-            :href="social.url"
-            :label="social.label"
-          />
-        </div>
       </nav>
     </div>
   </Transition>

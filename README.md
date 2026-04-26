@@ -1,35 +1,54 @@
-# Nuxt Content Starter
+# Portfolio (Nuxt 4)
 
-Look at the [Nuxt Content documentation](https://content.nuxt.com) to learn more.
+Portafolio personal migrado desde React a **Nuxt 4** con arquitectura por capas de UI y contenido en **@nuxt/content**.
 
-## Setup
+## Stack
 
-Make sure to install dependencies:
+- Nuxt 4
+- Vue 3 + TypeScript
+- Tailwind CSS v4
+- @nuxt/content
+- @nuxtjs/color-mode
+- Vitest
+
+## Arquitectura
+
+```txt
+app/
+  components/
+    base/        # primitives reutilizables
+    compound/    # composiciones del dominio portfolio
+    sections/    # secciones de páginas
+  composables/   # lógica compartida (tema y contenido)
+  layouts/
+  pages/
+  types/
+  utils/
+
+content/
+  projects/      # markdown de proyectos
+  posts/         # markdown de artículos
+```
+
+## Scripts
 
 ```bash
 bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
 bun run dev
+bun run lint
+bun run typecheck
+bun run test
 ```
 
-## Production
+> Nota: No se ejecuta build en el flujo diario de cambios.
 
-Build the application for production:
+## Convenciones
 
-```bash
-bun run build
-```
+- Componentes `base`: sin lógica de dominio.
+- Componentes `compound`: combinan primitives para entidades del portfolio.
+- `pages/`: composición final + SEO con `useSeoMeta`.
+- `content.config.ts`: schemas estrictos (slug kebab-case, URLs válidas, fecha `YYYY-MM-DD`).
 
-Locally preview production build:
+## Legacy
 
-```bash
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+La carpeta `react-port/` fue eliminada del repo activo para evitar doble fuente de verdad.

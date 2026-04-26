@@ -1,5 +1,12 @@
 <script setup lang="ts">
 const { data: posts } = await usePostsContent()
+
+useSeoMeta({
+  title: 'Blog | Juan Rangel',
+  description: 'Articles about software engineering, architecture, and practical frontend development.',
+  ogTitle: 'Blog | Juan Rangel',
+  ogDescription: 'Articles about software engineering, architecture, and practical frontend development.',
+})
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SOCIAL_LINKS } from '@/data/site'
+const { data: socialLinks } = await useSocialLinksContent()
 
 const year = new Date().getFullYear()
 </script>
@@ -10,7 +10,7 @@ const year = new Date().getFullYear()
       <div class="flex flex-col items-center gap-4">
         <div class="flex items-center gap-2">
           <BaseSocialIcon
-            v-for="social in SOCIAL_LINKS"
+            v-for="social in socialLinks"
             :key="social.id"
             :platform="social.platform"
             :href="social.url"

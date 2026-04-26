@@ -7,6 +7,14 @@ const { data: project } = await useProjectBySlugContent(slug)
 if (!project.value) {
   throw createError({ statusCode: 404, statusMessage: 'Project not found' })
 }
+
+useSeoMeta({
+  title: () => `${project.value?.title ?? 'Project'} | Juan Rangel`,
+  description: () => project.value?.description ?? 'Project details',
+  ogTitle: () => `${project.value?.title ?? 'Project'} | Juan Rangel`,
+  ogDescription: () => project.value?.description ?? 'Project details',
+  ogType: 'article',
+})
 </script>
 
 <template>

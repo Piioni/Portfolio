@@ -1,5 +1,12 @@
 <script setup lang="ts">
 const { data: projects } = await useProjectsContent()
+
+useSeoMeta({
+  title: 'Projects | Juan Rangel',
+  description: 'Selected software projects, experiments and production-ready applications.',
+  ogTitle: 'Projects | Juan Rangel',
+  ogDescription: 'Selected software projects, experiments and production-ready applications.',
+})
 </script>
 
 <template>

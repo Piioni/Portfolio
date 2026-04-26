@@ -7,6 +7,7 @@ tags:
   - Nuxt
   - Architecture
   - Frontend
+draft: false
 ---
 
 The migration was not just a framework swap. It was an opportunity to redesign the frontend with better boundaries.

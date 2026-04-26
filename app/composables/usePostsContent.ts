@@ -1,14 +1,25 @@
+import type { PostDetail, PostSummary } from '@/types/content'
+
+function toPostSummary(post: PostDetail): PostSummary {
+  return {
+    id: post.id,
+    title: post.title,
+    slug: post.slug,
+    description: post.description,
+    publishedAt: post.publishedAt,
+    tags: post.tags,
+  }
+}
+
 export function usePostsContent() {
   return useAsyncData('posts:list', async () => {
-    const posts = await queryCollection('posts').all()
+    const posts = await queryCollection('posts')
+      .select('id', 'title', 'slug', 'description', 'publishedAt', 'tags')
+      .where('draft', '=', false)
+      .order('publishedAt', 'DESC')
+      .all() as PostDetail[]
 
-    return posts.sort((a, b) => {
-      if (a.publishedAt === b.publishedAt) {
-        return a.title.localeCompare(b.title)
-      }
-
-      return a.publishedAt < b.publishedAt ? 1 : -1
-    })
+    return posts.map(toPostSummary)
   })
 }
 
@@ -17,7 +28,7 @@ export function usePostBySlugContent(slug: MaybeRefOrGetter<string>) {
 
   return useAsyncData(
     () => `posts:${slugValue.value}`,
-    () => queryCollection('posts').where('slug', '=', slugValue.value).first(),
+    () => queryCollection('posts').where('slug', '=', slugValue.value).first() as Promise<PostDetail | null>,
     {
       watch: [slugValue],
     },

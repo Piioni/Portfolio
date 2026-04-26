@@ -10,9 +10,6 @@
     "postinstall": "nuxt prepare",
     "test": "vitest run",
     "test:watch": "vitest --watch",
-    "test:unit": "vitest run --project unit",
-    "test:nuxt": "vitest run --project nuxt",
-    "test:e2e": "vitest run --project e2e",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "nuxt typecheck"
@@ -25,6 +22,7 @@
     "@nuxt/hints": "1.0.3",
     "@nuxt/icon": "2.2.1",
     "@nuxt/image": "2.0.0",
+    "@nuxtjs/color-mode": "^4.0.0",
     "@tailwindcss/vite": "^4.2.4",
     "@types/node": "^25.6.0",
     "nuxt": "^4.4.2",
@@ -35,9 +33,12 @@
     "@antfu/eslint-config": "^8.2.0",
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/simple-icons": "^1.2.79",
+    "@vue/test-utils": "^2.4.8",
     "eslint": "^10.2.1",
     "eslint-plugin-format": "^2.0.1",
+    "jsdom": "^29.0.2",
     "typescript": "^6.0.3",
+    "vitest": "^4.1.5",
     "vue-tsc": "^3.2.7"
   }
 }

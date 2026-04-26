@@ -9,11 +9,9 @@ const { data: projects } = await useFeaturedProjectsContent(3)
         Featured Projects
       </h2>
 
-      <NuxtLink to="/projects">
-        <BaseButton variant="ghost" size="sm">
-          More projects
-          <Icon name="mdi:arrow-right" class="ml-2 size-4" />
-        </BaseButton>
+      <NuxtLink to="/projects" class="link-muted rounded-lg px-2 py-1 text-sm font-medium">
+        <span>More projects</span>
+        <Icon name="mdi:arrow-right" class="size-4" />
       </NuxtLink>
     </div>
 

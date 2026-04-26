@@ -1,15 +1,8 @@
 <script setup lang="ts">
-interface ProjectCardItem {
-  title: string
-  description: string
-  technologies: string[]
-  githubUrl?: string
-  liveUrl?: string
-  slug: string
-}
+import type { ProjectSummary } from '@/types/content'
 
 interface Props {
-  project: ProjectCardItem
+  project: ProjectSummary
 }
 
 defineProps<Props>()

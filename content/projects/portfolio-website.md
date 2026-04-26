@@ -10,6 +10,7 @@ technologies:
 githubUrl: https://github.com/Piioni/Portfolio
 liveUrl: https://piioni.github.io/Portfolio
 featured: true
+order: 1
 ---
 
 This portfolio focuses on **clean architecture** in the frontend:

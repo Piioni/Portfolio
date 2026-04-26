@@ -1,14 +1,8 @@
 <script setup lang="ts">
-interface PostCardItem {
-  title: string
-  description: string
-  slug: string
-  publishedAt: string
-  tags: string[]
-}
+import type { PostSummary } from '@/types/content'
 
 interface Props {
-  post: PostCardItem
+  post: PostSummary
 }
 
 defineProps<Props>()
@@ -27,7 +21,7 @@ defineProps<Props>()
     </p>
 
     <div class="mb-3 text-xs tracking-wide text-accent-lavender-light uppercase dark:text-accent-lavender-dark">
-      {{ new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) }}
+      {{ formatDate(post.publishedAt, { month: 'short', day: 'numeric', year: 'numeric' }) }}
     </div>
 
     <div class="mt-2 flex flex-wrap gap-2 border-t border-border-light pt-3 dark:border-border-dark">

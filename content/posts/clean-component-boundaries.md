@@ -7,6 +7,7 @@ tags:
   - Clean Architecture
   - Components
   - Vue
+draft: false
 ---
 
 When every component is allowed to do everything, your codebase becomes fragile.

@@ -9,6 +9,7 @@ technologies:
   - JavaScript
 githubUrl: https://github.com/Piioni/Pegasus-Medical-WebPage
 featured: true
+order: 2
 ---
 
 Built as an internship project, this app solved stock visibility issues across multiple hospitals.

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { SKILL_GROUPS } from '@/data/site'
+const { data: skillGroups } = await useSkillGroupsContent()
 
-const topRow = computed(() => SKILL_GROUPS.filter(group => group.category === 'frontend' || group.category === 'backend'))
-const bottomRow = computed(() => SKILL_GROUPS.filter(group => ['database', 'devtools', 'os'].includes(group.category)))
+const topRow = computed(() => (skillGroups.value ?? []).filter(group => group.category === 'frontend' || group.category === 'backend'))
+const bottomRow = computed(() => (skillGroups.value ?? []).filter(group => ['database', 'devtools', 'os'].includes(group.category)))
 </script>
 
 <template>

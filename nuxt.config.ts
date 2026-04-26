@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
+    '@nuxtjs/color-mode',
     '@nuxt/a11y',
     '@nuxt/eslint',
     '@nuxt/fonts',
@@ -19,6 +20,15 @@ export default defineNuxtConfig({
   },
 
   css: ['./app/assets/css/main.css'],
+
+  colorMode: {
+    preference: 'system',
+    fallback: 'light',
+    classPrefix: '',
+    classSuffix: '',
+    storage: 'localStorage',
+    storageKey: 'theme',
+  },
 
   vite: {
     plugins: [tailwindcss()],

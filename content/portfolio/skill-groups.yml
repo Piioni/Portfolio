@@ -1,0 +1,89 @@
+groups:
+  - category: frontend
+    label: FrontEnd
+    skills:
+      - id: html
+        name: Html
+        category: frontend
+      - id: javascript
+        name: JavaScript
+        category: frontend
+      - id: typescript
+        name: TypeScript
+        category: frontend
+      - id: react
+        name: React
+        category: frontend
+      - id: tailwindcss
+        name: TailwindCSS
+        category: frontend
+      - id: vite
+        name: Vite
+        category: frontend
+
+  - category: backend
+    label: BackEnd
+    skills:
+      - id: nestjs
+        name: NestJS
+        category: backend
+      - id: laravel
+        name: Laravel
+        category: backend
+      - id: python
+        name: Python
+        category: backend
+      - id: java
+        name: Java
+        category: backend
+      - id: php
+        name: Php
+        category: backend
+      - id: bunjs
+        name: Bun
+        category: backend
+
+  - category: database
+    label: Database
+    skills:
+      - id: mongodb
+        name: MongoDB
+        category: database
+      - id: mysql
+        name: MySql
+        category: database
+      - id: postgresql
+        name: PostgreSQL
+        category: database
+
+  - category: devtools
+    label: Dev Tools
+    skills:
+      - id: git
+        name: Git
+        category: devtools
+      - id: github
+        name: GitHub
+        category: devtools
+      - id: docker
+        name: Docker
+        category: devtools
+      - id: vim
+        name: Vim Motions
+        category: devtools
+
+  - category: os
+    label: Operating Systems
+    skills:
+      - id: archlinux
+        name: Arch
+        category: os
+      - id: linux
+        name: Linux
+        category: os
+      - id: windows
+        name: Windows
+        category: os
+      - id: mac
+        name: Mac
+        category: os

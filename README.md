@@ -1,46 +1,50 @@
-# Portafolio personal
+# Portfolio (Nuxt 4)
 
-Este repositorio contiene un sitio web de portafolio personal construido con React, TypeScript y Vite.
-Está pensado para mostrar proyectos, experiencia laboral, habilidades e intereses, y sirve como plantilla
-ligera para desarrollar y desplegar una web personal moderna.
+Portafolio personal migrado desde React a **Nuxt 4** con arquitectura por capas de UI y contenido en **@nuxt/content**.
 
-Características principales:
+## Stack
 
-- Diseño responsivo y componentes reutilizables.
-- Secciones para proyectos, experiencia, habilidades e intereses.
-- Tema claro/oscuro con guardado de preferencia.
+- Nuxt 4
+- Vue 3 + TypeScript
+- Tailwind CSS v4
+- @nuxt/content
+- @nuxtjs/color-mode
+- Vitest
 
-Tecnologías:
+## Arquitectura
 
-- React (TSX)
-- TypeScript
-- Vite (dev server rápido y bundling)
-- CSS moderno (estilos en `src/index.css`)
+```txt
+app/
+  components/
+    base/        # primitives reutilizables
+    compound/    # composiciones del dominio portfolio
+    sections/    # secciones de páginas
+  composables/   # lógica compartida (tema y contenido)
+  layouts/
+  pages/
+  types/
+  utils/
 
-# Estructura destacada del proyecto:
+content/
+  projects/      # markdown de proyectos
+  posts/         # markdown de artículos
+```
 
-- `src/` - código fuente de la app
-    - `components/` - componentes UI y secciones
-    - `data/` - contenido estático (proyectos, skills, etc.)
-    - `pages/` - páginas principales
-    - `hooks/` - hooks personalizados (ej. `useTheme`)
-- `public/` - assets estáticos
-- `vite.config.ts`, `tsconfig.json`, `package.json` - configuración del proyecto
+## Scripts
 
-# Instalación y ejecución (local):
+```bash
+bun install
+bun run dev
+bun run lint
+bun run typecheck
+bun run test
+```
 
-1. Instalar dependencias
+> Nota: No se ejecuta build en el flujo diario de cambios.
 
-    bun install
+## Convenciones
 
-2. Iniciar servidor de desarrollo
-
-    bun run dev
-
-3. Generar build de producción
-
-    bun run build
-
-4. Previsualizar build localmente
-
-    bun run preview
+- Componentes `base`: sin lógica de dominio.
+- Componentes `compound`: combinan primitives para entidades del portfolio.
+- `pages/`: composición final + SEO con `useSeoMeta`.
+- `content.config.ts`: schemas estrictos (slug kebab-case, URLs válidas, fecha `YYYY-MM-DD`).

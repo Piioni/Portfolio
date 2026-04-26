@@ -1,0 +1,171 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background-dark: #1e1e1e;
+  --color-background-light: #f5f1e8;
+
+  --color-surface-dark: #252525;
+  --color-surface-light: #ebe6da;
+
+  --color-bubble-dark: rgb(37 37 37 / 92%);
+  --color-bubble-light: rgb(250 247 240 / 92%);
+
+  --color-border-dark: hsl(0 0% 100% / 10%);
+  --color-border-light: hsl(35 20% 60% / 20%);
+
+  --color-text-primary-dark: #e4e4e7;
+  --color-text-primary-light: #312528;
+  --color-text-muted-dark: #a1a1aa;
+  --color-text-muted-light: #6b6860;
+
+  --color-accent-lavender-light: oklch(0.6 0.18 290);
+  --color-accent-lavender-hover-light: oklch(0.68 0.2 290);
+  --color-accent-lavender-dark: oklch(0.72 0.12 290);
+  --color-accent-lavender-hover-dark: oklch(0.78 0.14 290);
+
+  --font-mono:
+    'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas,
+    'Liberation Mono', monospace;
+
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:root {
+  min-height: 100%;
+}
+
+html {
+  @apply font-mono scroll-smooth w-full;
+  @apply bg-background-light dark:bg-background-dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  padding-top: 100vh;
+  margin-top: -100vh;
+}
+
+body {
+  @apply m-0 w-full min-h-screen relative;
+  @apply bg-background-light dark:bg-background-dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .section-title {
+    @apply text-2xl font-bold text-accent-lavender-light dark:text-accent-lavender-dark mb-6;
+  }
+
+  .text-muted {
+    @apply text-text-muted-light dark:text-text-muted-dark;
+  }
+
+  .text-primary {
+    @apply text-text-primary-light dark:text-text-primary-dark;
+  }
+
+  .link-muted {
+    @apply flex items-center gap-1.5 text-sm;
+    @apply text-text-muted-light dark:text-text-muted-dark;
+    @apply hover:text-accent-lavender-light dark:hover:text-accent-lavender-dark transition-colors;
+  }
+
+  .bg-surface {
+    @apply bg-surface-light dark:bg-surface-dark;
+  }
+
+  .border-themed {
+    @apply border border-border-light dark:border-border-dark;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 ease-(--ease-smooth);
+  }
+
+  .hover-glow:hover {
+    @apply shadow-[0_0_20px_oklch(0.6_0.18_290/0.4)] dark:shadow-[0_0_20px_oklch(0.72_0.12_290/0.3)];
+    @apply border-accent-lavender-light dark:border-accent-lavender-dark;
+  }
+}
+
+@layer utilities {
+  .focus-ring {
+    outline: none;
+  }
+
+  .focus-ring:focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent-lavender-light dark:outline-accent-lavender-dark;
+  }
+
+  @keyframes fade-scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95) translateY(-0.5rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .animate-fade-scale-in {
+    animation: fade-scale-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+  }
+
+  .background-pattern {
+    @apply fixed inset-0 pointer-events-none z-0;
+    background-image:
+      linear-gradient(90deg, hsl(35 15% 45% / 5%) 1px, transparent 0),
+      linear-gradient(180deg, hsl(35 15% 45% / 5%) 1px, transparent 0);
+    background-size: 20px 20px;
+    top: -100vh;
+    height: calc(100vh + 100%);
+  }
+
+  .icon-tone-html { color: #e34f26; }
+  .icon-tone-css { color: #1572b6; }
+  .icon-tone-javascript { color: #f7df1e; }
+  .icon-tone-typescript { color: #3178c6; }
+  .icon-tone-react { color: #61dafb; }
+  .icon-tone-tailwindcss { color: #06b6d4; }
+  .icon-tone-vite { color: #646cff; }
+  .icon-tone-nestjs { color: #e0234e; }
+  .icon-tone-laravel { color: #ff2d20; }
+  .icon-tone-php { color: #777bb4; }
+  .icon-tone-python { color: #3776ab; }
+  .icon-tone-java { color: #ed8b00; }
+  .icon-tone-bun { color: #b4a280; }
+  .icon-tone-mongodb { color: #47a248; }
+  .icon-tone-mysql { color: #4479a1; }
+  .icon-tone-postgresql { color: #4169e1; }
+  .icon-tone-git { color: #f05032; }
+  .icon-tone-github { color: #999999; }
+  .icon-tone-docker { color: #2496ed; }
+  .icon-tone-apache { color: #d22128; }
+  .icon-tone-vim { color: #019733; }
+  .icon-tone-archlinux { color: #1793d1; }
+  .icon-tone-linux { color: #fcc624; }
+  .icon-tone-windows { color: #0078d6; }
+  .icon-tone-mac { color: #999999; }
+  .icon-tone-nuxt { color: #00dc82; }
+  .icon-tone-nuxt-content { color: #00dc82; }
+  .icon-tone-vue { color: #42b883; }
+  .icon-tone-open-source { color: #61dafb; }
+  .icon-tone-reading { color: #8b4513; }
+  .icon-tone-movies { color: #ffd700; }
+  .icon-tone-music { color: #9b59b6; }
+  .icon-tone-coffee { color: #6f4e37; }
+  .icon-tone-gaming { color: #e74c3c; }
+  .icon-tone-concept { @apply text-accent-lavender-light dark:text-accent-lavender-dark; }
+  .icon-tone-muted { @apply text-text-muted-light dark:text-text-muted-dark; }
+
+  .dark .background-pattern {
+    background-image:
+      linear-gradient(90deg, hsl(0 0% 100% / 3.5%) 1px, transparent 0),
+      linear-gradient(180deg, hsl(0 0% 100% / 3.5%) 1px, transparent 0);
+  }
+}

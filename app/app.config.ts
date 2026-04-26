@@ -33,6 +33,7 @@ export default defineAppConfig({
       'brand-postgresql': 'simple-icons:postgresql',
       'brand-git': 'simple-icons:git',
       'brand-docker': 'simple-icons:docker',
+      'brand-apache': 'simple-icons:apache',
       'brand-vim': 'simple-icons:vim',
       'brand-archlinux': 'simple-icons:archlinux',
       'brand-linux': 'simple-icons:linux',

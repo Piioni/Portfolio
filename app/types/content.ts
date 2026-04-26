@@ -17,7 +17,7 @@ export interface ProjectSummary {
   title: string
   slug: string
   description: string
-  technologies: string[]
+  technologies: Array<{ id: string, label: string }>
   githubUrl?: string
   liveUrl?: string
   featured: boolean

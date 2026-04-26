@@ -2,6 +2,48 @@ import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 
 const SLUG_REGEX = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
 const ISO_DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/
+const ICON_IDS = [
+  'html',
+  'css',
+  'javascript',
+  'typescript',
+  'react',
+  'tailwindcss',
+  'vite',
+  'nestjs',
+  'laravel',
+  'php',
+  'python',
+  'java',
+  'bunjs',
+  'mongodb',
+  'mysql',
+  'postgresql',
+  'git',
+  'github',
+  'docker',
+  'apache',
+  'vim',
+  'archlinux',
+  'linux',
+  'windows',
+  'mac',
+  'nuxt',
+  'nuxt-content',
+  'vue',
+  'architecture',
+  'clean-architecture',
+  'components',
+  'frontend',
+  'open-source',
+  'reading',
+  'movies',
+  'music',
+  'coffee',
+  'gaming',
+] as const
+
+const iconIdSchema = z.enum(ICON_IDS)
 
 export default defineContentConfig({
   collections: {
@@ -12,7 +54,10 @@ export default defineContentConfig({
         title: z.string().min(1),
         slug: z.string().regex(SLUG_REGEX, 'Slug must be kebab-case'),
         description: z.string().min(1),
-        technologies: z.array(z.string().min(1)).min(1),
+        technologies: z.array(z.object({
+          id: iconIdSchema,
+          label: z.string().min(1),
+        })).min(1),
         githubUrl: z.string().url().optional(),
         liveUrl: z.string().url().optional(),
         featured: z.boolean().default(false),
@@ -56,7 +101,7 @@ export default defineContentConfig({
           category: z.enum(['frontend', 'backend', 'database', 'devtools', 'os']),
           label: z.string().min(1),
           skills: z.array(z.object({
-            id: z.string().min(1),
+            id: iconIdSchema,
             name: z.string().min(1),
             category: z.enum(['frontend', 'backend', 'database', 'devtools', 'os']),
           })).min(1),
@@ -75,7 +120,10 @@ export default defineContentConfig({
           endDate: z.string().regex(/^\d{4}-\d{2}$/, 'endDate must be YYYY-MM').optional(),
           description: z.string().min(1),
           highlights: z.array(z.string().min(1)).optional(),
-          technologies: z.array(z.string().min(1)).min(1),
+          technologies: z.array(z.object({
+            id: iconIdSchema,
+            label: z.string().min(1),
+          })).min(1),
         })).min(1),
       }),
     }),
@@ -84,7 +132,7 @@ export default defineContentConfig({
       source: 'portfolio/interests.yml',
       schema: z.object({
         items: z.array(z.object({
-          id: z.string().regex(SLUG_REGEX, 'id must be kebab-case'),
+          id: iconIdSchema,
           label: z.string().min(1),
         })).min(1),
       }),

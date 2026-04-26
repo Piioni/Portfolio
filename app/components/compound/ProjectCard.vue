@@ -21,7 +21,7 @@ defineProps<Props>()
     </p>
 
     <div class="mt-4 flex flex-wrap gap-2">
-      <BaseBadge v-for="tech in project.technologies" :key="tech" :label="tech" />
+      <BaseBadge v-for="tech in project.technologies" :key="tech.id" :label="tech.label" :icon-id="tech.id" />
     </div>
 
     <div class="mt-2 flex items-center gap-4 border-t border-border-light pt-3 dark:border-border-dark">

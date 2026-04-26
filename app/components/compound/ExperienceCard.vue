@@ -44,7 +44,7 @@ const dateRange = computed(() => formatDateRange(props.experience.startDate, pro
       </ul>
 
       <div class="mt-3 flex flex-wrap gap-2">
-        <BaseBadge v-for="tech in experience.technologies" :key="tech" :label="tech" />
+        <BaseBadge v-for="tech in experience.technologies" :key="tech.id" :label="tech.label" :icon-id="tech.id" />
       </div>
     </div>
   </article>

@@ -37,7 +37,7 @@ export interface ExperienceItem {
   endDate?: string
   description: string
   highlights?: string[]
-  technologies: string[]
+  technologies: Array<{ id: string, label: string }>
 }
 
 export interface InterestItem {

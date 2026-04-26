@@ -38,17 +38,11 @@ export type IconId
     | 'music'
     | 'coffee'
     | 'gaming'
+    | 'apache'
 
 export interface IconMeta {
   name: string
   toneClass: string
-}
-
-interface IconLookupOptions {
-  id?: string | null
-  label?: string
-  source?: string
-  warnOnMissing?: boolean
 }
 
 const ICON_FALLBACK: IconMeta = {
@@ -94,46 +88,7 @@ const ICON_MAP: Record<IconId, IconMeta> = {
   'music': { name: 'interest-music', toneClass: 'icon-tone-music' },
   'coffee': { name: 'interest-coffee', toneClass: 'icon-tone-coffee' },
   'gaming': { name: 'interest-gaming', toneClass: 'icon-tone-gaming' },
-}
-
-const LABEL_TO_ICON_ID: Record<string, IconId> = {
-  'html': 'html',
-  'css': 'css',
-  'javascript': 'javascript',
-  'typescript': 'typescript',
-  'react': 'react',
-  'tailwindcss': 'tailwindcss',
-  'vite': 'vite',
-  'nestjs': 'nestjs',
-  'laravel': 'laravel',
-  'php': 'php',
-  'python': 'python',
-  'java': 'java',
-  'bun': 'bunjs',
-  'mongodb': 'mongodb',
-  'mysql': 'mysql',
-  'postgresql': 'postgresql',
-  'git': 'git',
-  'github': 'github',
-  'docker': 'docker',
-  'vim motions': 'vim',
-  'arch': 'archlinux',
-  'linux': 'linux',
-  'windows': 'windows',
-  'mac': 'mac',
-  'nuxt': 'nuxt',
-  'nuxt content': 'nuxt-content',
-  'vue': 'vue',
-  'architecture': 'architecture',
-  'clean architecture': 'clean-architecture',
-  'components': 'components',
-  'frontend': 'frontend',
-  'open source': 'open-source',
-  'reading': 'reading',
-  'movies': 'movies',
-  'music': 'music',
-  'coffee': 'coffee',
-  'gaming': 'gaming',
+  'apache': { name: 'brand-apache', toneClass: 'icon-tone-apache' },
 }
 
 const SOCIAL_ICON_MAP: Record<SocialPlatform, string> = {
@@ -143,51 +98,12 @@ const SOCIAL_ICON_MAP: Record<SocialPlatform, string> = {
   email: 'email',
 }
 
-const warnedMissingIcons = new Set<string>()
-
-function warnMissingIcon(key: string, source: string | undefined) {
-  if (warnedMissingIcons.has(key)) {
-    return
+export function resolveIconMetaById(id?: string | null): IconMeta | null {
+  if (!id) {
+    return null
   }
 
-  warnedMissingIcons.add(key)
-
-  console.warn(`[icons] Missing icon mapping${source ? ` for ${source}` : ''}: "${key}"`)
-}
-
-function normalizeKey(value: string): string {
-  return value.trim().toLowerCase()
-}
-
-export function resolveIconMeta(options: IconLookupOptions): IconMeta {
-  const { id, label, source, warnOnMissing = import.meta.dev } = options
-
-  if (id) {
-    const iconById = ICON_MAP[id as IconId]
-
-    if (iconById) {
-      return iconById
-    }
-
-    if (warnOnMissing) {
-      warnMissingIcon(`id:${id}`, source)
-    }
-  }
-
-  if (label) {
-    const normalizedLabel = normalizeKey(label)
-    const iconId = LABEL_TO_ICON_ID[normalizedLabel]
-
-    if (iconId) {
-      return ICON_MAP[iconId]
-    }
-
-    if (warnOnMissing) {
-      warnMissingIcon(`label:${label}`, source)
-    }
-  }
-
-  return ICON_FALLBACK
+  return ICON_MAP[id as IconId] ?? ICON_FALLBACK
 }
 
 export function getSocialIcon(platform: SocialPlatform): string {

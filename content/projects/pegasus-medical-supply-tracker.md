@@ -3,10 +3,14 @@ title: Pegasus Medical Supply Tracker
 slug: pegasus-medical-supply-tracker
 description: Inventory tracking platform for hospital medical supplies with role-based access and containerized deployment.
 technologies:
-  - Docker
-  - PHP
-  - MySQL
-  - JavaScript
+  - id: docker
+    label: Docker
+  - id: php
+    label: PHP
+  - id: mysql
+    label: MySQL
+  - id: javascript
+    label: JavaScript
 githubUrl: https://github.com/Piioni/Pegasus-Medical-WebPage
 featured: true
 order: 2

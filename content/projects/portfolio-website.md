@@ -3,10 +3,14 @@ title: Portfolio Website
 slug: portfolio-website
 description: A modern responsive portfolio migrated to Nuxt 4 with modular architecture and content collections.
 technologies:
-  - Nuxt
-  - TypeScript
-  - TailwindCSS
-  - Nuxt Content
+  - id: nuxt
+    label: Nuxt
+  - id: typescript
+    label: TypeScript
+  - id: tailwindcss
+    label: TailwindCSS
+  - id: nuxt-content
+    label: Nuxt Content
 githubUrl: https://github.com/Piioni/Portfolio
 liveUrl: https://piioni.github.io/Portfolio
 featured: true

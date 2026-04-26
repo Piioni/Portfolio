@@ -9,10 +9,17 @@ items:
       - Followed MVC (Model-View-Controller) architecture for clean, scalable, and maintainable code.
       - Containerized the PHP application and database using Docker, ensuring consistent deployment and development environments.
     technologies:
-      - Php
-      - Docker
-      - MySql
-      - Html
-      - Css
-      - Javascript
-      - Apache
+      - id: php
+        label: Php
+      - id: docker
+        label: Docker
+      - id: mysql
+        label: MySql
+      - id: html
+        label: Html
+      - id: css
+        label: Css
+      - id: javascript
+        label: Javascript
+      - id: apache
+        label: Apache

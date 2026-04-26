@@ -17,6 +17,20 @@ const sizeStyles: Record<AvatarSize, string> = {
   lg: 'size-20',
   xl: 'size-32',
 }
+
+const sizePixels: Record<AvatarSize, number> = {
+  sm: 32,
+  md: 48,
+  lg: 80,
+  xl: 128,
+}
+
+const sizes: Record<AvatarSize, string> = {
+  sm: '32px',
+  md: '48px',
+  lg: '80px',
+  xl: '128px',
+}
 </script>
 
 <template>
@@ -25,6 +39,15 @@ const sizeStyles: Record<AvatarSize, string> = {
       sizeStyles[props.size],
     ]"
   >
-    <img :src="props.src" :alt="props.alt" class="size-full object-cover">
+    <NuxtImg
+      :src="props.src"
+      :alt="props.alt"
+      :width="sizePixels[props.size]"
+      :height="sizePixels[props.size]"
+      :sizes="sizes[props.size]"
+      format="webp"
+      loading="lazy"
+      class="size-full object-cover"
+    />
   </div>
 </template>

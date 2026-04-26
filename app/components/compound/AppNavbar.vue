@@ -49,15 +49,13 @@ watch(() => route.path, closeMenu)
 
         <div class="flex items-center gap-2 md:hidden">
           <CompoundThemeToggle />
-          <button
-            type="button"
+          <BaseButton
             :aria-label="isMenuOpen ? 'Close menu' : 'Open menu'"
             :aria-expanded="isMenuOpen"
-            class="focus-ring inline-flex size-10 items-center justify-center rounded-lg text-text-muted-light transition-all duration-300 ease-(--ease-smooth) hover:bg-accent-lavender-light/10 hover:text-accent-lavender-light dark:text-text-muted-dark dark:hover:bg-accent-lavender-dark/10 dark:hover:text-accent-lavender-dark"
             @click="isMenuOpen = !isMenuOpen"
           >
             <Icon :name="isMenuOpen ? 'close' : 'menu'" class="size-5" aria-hidden="true" />
-          </button>
+          </BaseButton>
         </div>
       </nav>
     </BaseContainer>

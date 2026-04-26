@@ -1,45 +1,17 @@
 <script setup lang="ts">
-type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'outline'
-type ButtonSize = 'sm' | 'md' | 'lg'
-
 interface Props {
-  variant?: ButtonVariant
-  size?: ButtonSize
-  fullWidth?: boolean
+  type?: 'button' | 'submit' | 'reset'
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  variant: 'primary',
-  size: 'md',
-  fullWidth: false,
+  type: 'button',
 })
-
-const variantStyles: Record<ButtonVariant, string> = {
-  primary:
-    'bg-accent-lavender-light dark:bg-accent-lavender-dark text-white hover:bg-accent-lavender-hover-light dark:hover:bg-accent-lavender-hover-dark shadow-sm',
-  secondary:
-    'bg-surface-light dark:bg-surface-dark text-text-primary-light dark:text-text-primary-dark hover:opacity-90',
-  ghost:
-    'bg-transparent text-text-primary-light dark:text-text-primary-dark hover:bg-surface-light dark:hover:bg-surface-dark',
-  outline:
-    'border-themed bg-transparent text-text-primary-light dark:text-text-primary-dark hover:bg-surface-light dark:hover:bg-surface-dark hover-glow',
-}
-
-const sizeStyles: Record<ButtonSize, string> = {
-  sm: 'px-3 py-1.5 text-sm',
-  md: 'px-4 py-2 text-base',
-  lg: 'px-6 py-3 text-lg',
-}
 </script>
 
 <template>
   <button
-    type="button"
-    class="focus-ring inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 ease-[var(--ease-smooth)] disabled:cursor-not-allowed disabled:opacity-50" :class="[
-      variantStyles[props.variant],
-      sizeStyles[props.size],
-      props.fullWidth && 'w-full',
-    ]"
+    :type="props.type"
+    class="focus-ring inline-flex size-10 items-center justify-center rounded-lg text-text-muted-light transition-all duration-300 ease-(--ease-smooth) hover:bg-accent-lavender-light/10 hover:text-accent-lavender-light dark:text-text-muted-dark dark:hover:bg-accent-lavender-dark/10 dark:hover:text-accent-lavender-dark"
   >
     <slot />
   </button>

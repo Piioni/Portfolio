@@ -1,5 +1,6 @@
 import type { IconDefinition, IconId } from '../../shared/icon-registry'
 import {
+  ICON_IDS,
   ICON_REGISTRY,
 
   SOCIAL_ICON_BY_PLATFORM,
@@ -10,9 +11,15 @@ const ICON_FALLBACK: IconDefinition = {
   toneClass: 'icon-tone-muted',
 }
 
+const ICON_ID_SET = new Set<string>(ICON_IDS)
+
 export interface IconMeta {
   name: string
   toneClass: string
+}
+
+function isIconId(value: string): value is IconId {
+  return ICON_ID_SET.has(value)
 }
 
 export function resolveIconMetaById(id?: string | null): IconMeta | null {
@@ -20,10 +27,10 @@ export function resolveIconMetaById(id?: string | null): IconMeta | null {
     return null
   }
 
-  const icon = ICON_REGISTRY[id as IconId] ?? ICON_FALLBACK
+  const icon = isIconId(id) ? ICON_REGISTRY[id] : ICON_FALLBACK
 
   return {
-    name: id in ICON_REGISTRY ? id : icon.icon,
+    name: isIconId(id) ? id : icon.icon,
     toneClass: icon.toneClass,
   }
 }

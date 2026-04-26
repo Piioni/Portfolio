@@ -3,11 +3,6 @@ import type { IconId } from '../../shared/icon-registry'
 export type Theme = 'light' | 'dark' | 'system'
 export type ResolvedTheme = 'light' | 'dark'
 
-export interface NavLinkItem {
-  label: string
-  href: string
-}
-
 export type SocialPlatform = 'github' | 'linkedin' | 'twitter' | 'email'
 
 export interface SocialLinkItem {

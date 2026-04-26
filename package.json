@@ -26,7 +26,6 @@
     "@tailwindcss/vite": "^4.2.4",
     "@types/node": "^25.6.0",
     "nuxt": "^4.4.2",
-    "outdated": "^0.1.1",
     "tailwindcss": "^4.2.4"
   },
   "devDependencies": {

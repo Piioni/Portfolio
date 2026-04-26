@@ -5,7 +5,7 @@ import { getSocialIcon, resolveIconMetaById } from '@/utils/icons'
 describe('icons utils', () => {
   it('returns icon metadata for stable ids', () => {
     expect(resolveIconMetaById('typescript')).toEqual({
-      name: 'brand-typescript',
+      name: 'typescript',
       toneClass: 'icon-tone-typescript',
     })
   })
@@ -23,7 +23,7 @@ describe('icons utils', () => {
 
   it('returns new apache mapping', () => {
     expect(resolveIconMetaById('apache')).toEqual({
-      name: 'brand-apache',
+      name: 'apache',
       toneClass: 'icon-tone-apache',
     })
   })

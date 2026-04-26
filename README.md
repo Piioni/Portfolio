@@ -48,7 +48,3 @@ bun run test
 - Componentes `compound`: combinan primitives para entidades del portfolio.
 - `pages/`: composición final + SEO con `useSeoMeta`.
 - `content.config.ts`: schemas estrictos (slug kebab-case, URLs válidas, fecha `YYYY-MM-DD`).
-
-## Legacy
-
-La carpeta `react-port/` fue eliminada del repo activo para evitar doble fuente de verdad.

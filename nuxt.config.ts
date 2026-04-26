@@ -38,16 +38,6 @@ export default defineNuxtConfig({
     },
     clientBundle: {
       scan: true,
-      icons: [
-        'mdi:menu',
-        'mdi:close',
-        'mdi:white-balance-sunny',
-        'mdi:moon-waning-crescent',
-        'simple-icons:github',
-        'mdi:open-in-new',
-        'mdi:arrow-right',
-        'mdi:circle-outline',
-      ],
       sizeLimitKb: 256,
     },
   },

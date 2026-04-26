@@ -1,48 +1,9 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 
+import { ICON_IDS } from './shared/icon-registry'
+
 const SLUG_REGEX = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
 const ISO_DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/
-const ICON_IDS = [
-  'html',
-  'css',
-  'javascript',
-  'typescript',
-  'react',
-  'tailwindcss',
-  'vite',
-  'nestjs',
-  'laravel',
-  'php',
-  'python',
-  'java',
-  'bunjs',
-  'mongodb',
-  'mysql',
-  'postgresql',
-  'git',
-  'github',
-  'docker',
-  'apache',
-  'vim',
-  'archlinux',
-  'linux',
-  'windows',
-  'mac',
-  'nuxt',
-  'nuxt-content',
-  'vue',
-  'architecture',
-  'clean-architecture',
-  'components',
-  'frontend',
-  'open-source',
-  'reading',
-  'movies',
-  'music',
-  'coffee',
-  'gaming',
-] as const
-
 const iconIdSchema = z.enum(ICON_IDS)
 
 export default defineContentConfig({

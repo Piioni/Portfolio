@@ -1,59 +1,25 @@
+import { ICON_REGISTRY } from '../shared/icon-registry'
+
+const iconAliasesFromRegistry = Object.fromEntries(
+  Object.entries(ICON_REGISTRY).map(([id, definition]) => [id, definition.icon]),
+)
+
 export default defineAppConfig({
   icon: {
     size: '1em',
     class: 'icon',
     aliases: {
+      ...iconAliasesFromRegistry,
       'menu': 'mdi:menu',
       'close': 'mdi:close',
       'sun': 'mdi:white-balance-sunny',
       'moon': 'mdi:moon-waning-crescent',
       'arrow': 'mdi:arrow-right',
       'ext': 'mdi:open-in-new',
-      'github': 'simple-icons:github',
       'linkedin': 'simple-icons:linkedin',
       'x': 'simple-icons:x',
       'email': 'mdi:email-outline',
       'fallback-circle': 'mdi:circle-outline',
-
-      'brand-html': 'simple-icons:html5',
-      'brand-css': 'simple-icons:css3',
-      'brand-javascript': 'simple-icons:javascript',
-      'brand-typescript': 'simple-icons:typescript',
-      'brand-react': 'simple-icons:react',
-      'brand-tailwindcss': 'simple-icons:tailwindcss',
-      'brand-vite': 'simple-icons:vite',
-      'brand-nestjs': 'simple-icons:nestjs',
-      'brand-laravel': 'simple-icons:laravel',
-      'brand-php': 'simple-icons:php',
-      'brand-python': 'simple-icons:python',
-      'brand-java': 'simple-icons:openjdk',
-      'brand-bun': 'simple-icons:bun',
-      'brand-mongodb': 'simple-icons:mongodb',
-      'brand-mysql': 'simple-icons:mysql',
-      'brand-postgresql': 'simple-icons:postgresql',
-      'brand-git': 'simple-icons:git',
-      'brand-docker': 'simple-icons:docker',
-      'brand-apache': 'simple-icons:apache',
-      'brand-vim': 'simple-icons:vim',
-      'brand-archlinux': 'simple-icons:archlinux',
-      'brand-linux': 'simple-icons:linux',
-      'brand-windows': 'simple-icons:windows',
-      'brand-apple': 'simple-icons:apple',
-      'brand-nuxt': 'simple-icons:nuxt',
-      'brand-vue': 'simple-icons:vuedotjs',
-      'brand-nuxt-content': 'simple-icons:nuxtdotjs',
-
-      'interest-open-source': 'mdi:code-tags',
-      'interest-reading': 'mdi:book-open-page-variant',
-      'interest-movies': 'mdi:movie-open',
-      'interest-music': 'mdi:music-note',
-      'interest-coffee': 'mdi:coffee',
-      'interest-gaming': 'mdi:controller',
-
-      'concept-architecture': 'mdi:sitemap',
-      'concept-clean-architecture': 'mdi:hexagon-multiple-outline',
-      'concept-components': 'mdi:view-grid-outline',
-      'concept-frontend': 'mdi:monitor-dashboard',
     },
   },
 })

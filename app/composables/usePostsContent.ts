@@ -1,13 +1,20 @@
-import type { PostDetail, PostSummary } from '@/types/content'
+import type { PostSummary } from '@/types/content'
 
-function toPostSummary(post: PostDetail): PostSummary {
+function toPostSummary(post: {
+  id: string
+  title: string
+  slug: string
+  description: string
+  publishedAt: string
+  tags?: string[]
+}): PostSummary {
   return {
     id: post.id,
     title: post.title,
     slug: post.slug,
     description: post.description,
     publishedAt: post.publishedAt,
-    tags: post.tags,
+    tags: post.tags ?? [],
   }
 }
 
@@ -17,7 +24,7 @@ export function usePostsContent() {
       .select('id', 'title', 'slug', 'description', 'publishedAt', 'tags')
       .where('draft', '=', false)
       .order('publishedAt', 'DESC')
-      .all() as PostDetail[]
+      .all()
 
     return posts.map(toPostSummary)
   })
@@ -28,7 +35,7 @@ export function usePostBySlugContent(slug: MaybeRefOrGetter<string>) {
 
   return useAsyncData(
     () => `posts:${slugValue.value}`,
-    () => queryCollection('posts').where('slug', '=', slugValue.value).first() as Promise<PostDetail | null>,
+    () => queryCollection('posts').where('slug', '=', slugValue.value).first(),
     {
       watch: [slugValue],
     },

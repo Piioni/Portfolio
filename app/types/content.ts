@@ -1,3 +1,4 @@
+import type { IconId } from '../../shared/icon-registry'
 import type {
   ExperienceItem,
   InterestItem,
@@ -17,7 +18,7 @@ export interface ProjectSummary {
   title: string
   slug: string
   description: string
-  technologies: Array<{ id: string, label: string }>
+  technologies: Array<{ id: IconId, label: string }>
   githubUrl?: string
   liveUrl?: string
   featured: boolean

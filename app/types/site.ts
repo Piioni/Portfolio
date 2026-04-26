@@ -1,3 +1,5 @@
+import type { IconId } from '../../shared/icon-registry'
+
 export type Theme = 'light' | 'dark' | 'system'
 export type ResolvedTheme = 'light' | 'dark'
 
@@ -18,7 +20,7 @@ export interface SocialLinkItem {
 export type SkillCategory = 'frontend' | 'backend' | 'database' | 'devtools' | 'os'
 
 export interface SkillItem {
-  id: string
+  id: IconId
   name: string
   category: SkillCategory
 }
@@ -37,10 +39,10 @@ export interface ExperienceItem {
   endDate?: string
   description: string
   highlights?: string[]
-  technologies: Array<{ id: string, label: string }>
+  technologies: Array<{ id: IconId, label: string }>
 }
 
 export interface InterestItem {
-  id: string
+  id: IconId
   label: string
 }

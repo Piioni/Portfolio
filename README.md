@@ -1,46 +1,75 @@
-# Portafolio personal
+# Nuxt Content Starter
 
-Este repositorio contiene un sitio web de portafolio personal construido con React, TypeScript y Vite.
-Está pensado para mostrar proyectos, experiencia laboral, habilidades e intereses, y sirve como plantilla
-ligera para desarrollar y desplegar una web personal moderna.
+Look at the [Nuxt Content documentation](https://content.nuxt.com) to learn more.
 
-Características principales:
+## Setup
 
-- Diseño responsivo y componentes reutilizables.
-- Secciones para proyectos, experiencia, habilidades e intereses.
-- Tema claro/oscuro con guardado de preferencia.
+Make sure to install dependencies:
 
-Tecnologías:
+```bash
+# npm
+npm install
 
-- React (TSX)
-- TypeScript
-- Vite (dev server rápido y bundling)
-- CSS moderno (estilos en `src/index.css`)
+# pnpm
+pnpm install
 
-# Estructura destacada del proyecto:
+# yarn
+yarn install
 
-- `src/` - código fuente de la app
-    - `components/` - componentes UI y secciones
-    - `data/` - contenido estático (proyectos, skills, etc.)
-    - `pages/` - páginas principales
-    - `hooks/` - hooks personalizados (ej. `useTheme`)
-- `public/` - assets estáticos
-- `vite.config.ts`, `tsconfig.json`, `package.json` - configuración del proyecto
+# bun
+bun install
+```
 
-# Instalación y ejecución (local):
+## Development Server
 
-1. Instalar dependencias
+Start the development server on `http://localhost:3000`:
 
-    bun install
+```bash
+# npm
+npm run dev
 
-2. Iniciar servidor de desarrollo
+# pnpm
+pnpm dev
 
-    bun run dev
+# yarn
+yarn dev
 
-3. Generar build de producción
+# bun
+bun run dev
+```
 
-    bun run build
+## Production
 
-4. Previsualizar build localmente
+Build the application for production:
 
-    bun run preview
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

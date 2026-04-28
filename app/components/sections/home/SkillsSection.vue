@@ -2,7 +2,7 @@
 const { data: skillGroups } = await useSkillGroupsContent()
 
 const topRow = computed(() => (skillGroups.value ?? []).filter(group => group.category === 'frontend' || group.category === 'backend'))
-const bottomRow = computed(() => (skillGroups.value ?? []).filter(group => ['database', 'devtools', 'os'].includes(group.category)))
+const bottomRow = computed(() => (skillGroups.value ?? []).filter(group => group.category === 'mobile' || group.category === 'devops' || group.category === 'tooling'))
 </script>
 
 <template>

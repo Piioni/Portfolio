@@ -20,10 +20,16 @@
 
           <p class="text-muted text-sm">
             My main tech stack is
-            <span class="font-medium text-accent-lavender-light dark:text-accent-lavender-dark">React</span>,
+            <span class="font-medium text-accent-lavender-light dark:text-accent-lavender-dark">Nuxt</span>,
             <span class="font-medium text-accent-lavender-light dark:text-accent-lavender-dark">TypeScript</span>
             and
-            <span class="font-medium text-accent-lavender-light dark:text-accent-lavender-dark">Tailwind</span>.
+            <span class="font-medium text-accent-lavender-light dark:text-accent-lavender-dark">TailwindCSS</span>.
+          </p>
+
+          <p class="text-muted text-sm">
+            I also work with
+            <span class="font-medium text-accent-lavender-light dark:text-accent-lavender-dark">React</span>
+            when the project needs it.
           </p>
 
           <p class="text-muted text-sm">

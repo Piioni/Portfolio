@@ -1,6 +1,6 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 
-import { ICON_IDS } from './shared/icon-registry'
+import { ICON_IDS } from './app/shared/icon-registry'
 
 const SLUG_REGEX = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
 const ISO_DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/

@@ -1,10 +1,10 @@
-import type { IconDefinition, IconId } from '../../shared/icon-registry'
+import type { IconDefinition, IconId } from '../shared/icon-registry'
 import {
   ICON_IDS,
   ICON_REGISTRY,
 
   SOCIAL_ICON_BY_PLATFORM,
-} from '../../shared/icon-registry'
+} from '../shared/icon-registry'
 
 const ICON_FALLBACK: IconDefinition = {
   icon: 'fallback-circle',

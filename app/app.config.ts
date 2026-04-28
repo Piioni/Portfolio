@@ -1,4 +1,4 @@
-import { ICON_REGISTRY } from '../shared/icon-registry'
+import { ICON_REGISTRY } from './shared/icon-registry'
 
 const iconAliasesFromRegistry = Object.fromEntries(
   Object.entries(ICON_REGISTRY).map(([id, definition]) => [id, definition.icon]),

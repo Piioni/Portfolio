@@ -1,4 +1,4 @@
-import type { IconId } from '../../shared/icon-registry'
+import type { IconId } from '../shared/icon-registry'
 
 export interface ProjectSummary {
   id: string

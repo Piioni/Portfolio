@@ -1,4 +1,22 @@
 items:
+  - id: wegow-music
+    company: Wegow Music
+    role: Multiplatform Engineering Intern
+    startDate: 2025-05
+    endDate: 2025-06
+    description: Migrated a legacy Android application written in Kotlin to a modern multiplatform solution using Kotlin Multiplatform and Compose. I shared business logic across platforms to improve maintainability and reduce duplication, while reusing UI with Compose where it provided clear value. I also reworked the architecture to separate responsibilities and modularize the project, making it easier to evolve, maintain, and scale. In addition, I resolved platform-specific differences in critical flows such as navigation, state, and persistence, adapting the solution to each environment's needs.
+    highlights:
+      - Shared business logic across platforms with Kotlin Multiplatform to reduce duplication and simplify maintenance.
+      - Reused UI with Compose where it made sense, keeping the user experience consistent.
+      - Reorganized the architecture into clearer modules and boundaries to improve scalability and long-term maintainability.
+    technologies:
+      - id: kotlin-multiplatform
+        label: Kotlin Multiplatform
+      - id: kotlin-compose
+        label: Kotlin Compose
+      - id: ios
+        label: iOS
+
   - id: pegasus-medical
     company: Pegasus Medical
     role: Intern Software Developer
@@ -21,5 +39,3 @@ items:
         label: Css
       - id: javascript
         label: Javascript
-      - id: apache
-        label: Apache

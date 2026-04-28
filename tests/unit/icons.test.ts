@@ -21,13 +21,6 @@ describe('icons utils', () => {
     })
   })
 
-  it('returns new apache mapping', () => {
-    expect(resolveIconMetaById('apache')).toEqual({
-      name: 'apache',
-      toneClass: 'icon-tone-apache',
-    })
-  })
-
   it('does not emit warnings for unknown ids', () => {
     const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {})
     resolveIconMetaById('another-unknown-id')

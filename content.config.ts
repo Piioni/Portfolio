@@ -59,12 +59,12 @@ export default defineContentConfig({
       source: 'portfolio/skill-groups.yml',
       schema: z.object({
         groups: z.array(z.object({
-          category: z.enum(['frontend', 'backend', 'database', 'devtools', 'os']),
+          category: z.enum(['frontend', 'backend', 'mobile', 'devops', 'tooling']),
           label: z.string().min(1),
           skills: z.array(z.object({
             id: iconIdSchema,
             name: z.string().min(1),
-            category: z.enum(['frontend', 'backend', 'database', 'devtools', 'os']),
+            category: z.enum(['frontend', 'backend', 'mobile', 'devops', 'tooling']),
           })).min(1),
         })).min(1),
       }),

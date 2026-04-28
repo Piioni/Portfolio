@@ -28,7 +28,13 @@ jobs:
           bun-version: latest
 
       - name: Install dependencies
-        run: bun install --frozen-lockfile --ignore-scripts
+        run: bun install --frozen-lockfile
+
+      - name: Install native build tools
+        run: sudo apt-get update && sudo apt-get install -y build-essential python3 make g++
+
+      - name: Rebuild better-sqlite3
+        run: bunx node-gyp rebuild --directory node_modules/better-sqlite3
 
       - name: Generate static site
         run: bun run generate

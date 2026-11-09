@@ -12,7 +12,7 @@ export interface SocialLinkItem {
   label: string
 }
 
-export type SkillCategory = 'frontend' | 'backend' | 'mobile' | 'devops' | 'tooling'
+export type SkillCategory = 'frontend' | 'backend' | 'mobile' | 'devops' | 'tooling' | 'ai'
 
 export interface SkillItem {
   id: IconId

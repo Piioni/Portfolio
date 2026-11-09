@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const { data: skillGroups } = await useSkillGroupsContent()
 
-const topRow = computed(() => (skillGroups.value ?? []).filter(group => group.category === 'frontend' || group.category === 'backend'))
-const bottomRow = computed(() => (skillGroups.value ?? []).filter(group => group.category === 'mobile' || group.category === 'devops' || group.category === 'tooling'))
+const topRow = computed(() => (skillGroups.value ?? []).filter(group => group.category === 'frontend' || group.category === 'backend' || group.category === 'mobile'))
+const bottomRow = computed(() => (skillGroups.value ?? []).filter(group => group.category === 'devops' || group.category === 'tooling' || group.category === 'ai'))
 </script>
 
 <template>
@@ -11,7 +11,7 @@ const bottomRow = computed(() => (skillGroups.value ?? []).filter(group => group
       Skills
     </h2>
 
-    <div class="mb-4 grid w-full grid-cols-1 gap-4 md:grid-cols-2">
+    <div class="mb-4 grid w-full grid-cols-1 gap-4 md:grid-cols-3">
       <CompoundSkillBubble v-for="group in topRow" :key="group.category" :group="group" />
     </div>
 

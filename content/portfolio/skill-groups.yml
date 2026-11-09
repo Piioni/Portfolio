@@ -52,6 +52,12 @@ groups:
   - category: mobile
     label: Mobile
     skills:
+      - id: flutter
+        name: Flutter
+        category: mobile
+      - id: dart
+        name: Dart
+        category: mobile
       - id: kotlin-multiplatform
         name: Kotlin Multiplatform
         category: mobile
@@ -93,3 +99,19 @@ groups:
       - id: nginx
         name: Nginx
         category: tooling
+      - id: figma
+        name: Figma
+        category: tooling
+
+  - category: ai
+    label: AI & Agents
+    skills:
+      - id: claude
+        name: Claude Code
+        category: ai
+      - id: mcp
+        name: MCP
+        category: ai
+      - id: ai-agents
+        name: Agent workflows
+        category: ai

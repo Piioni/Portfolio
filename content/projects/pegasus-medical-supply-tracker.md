@@ -1,25 +1,26 @@
 ---
 title: Pegasus Medical Supply Tracker
 slug: pegasus-medical-supply-tracker
-description: Inventory tracking platform for hospital medical supplies with role-based access and containerized deployment.
+description: Hospital stock management for warehouses and first-aid kits, with movements, restock requests and role-based access per location.
 technologies:
-  - id: docker
-    label: Docker
   - id: php
     label: PHP
   - id: mysql
     label: MySQL
+  - id: docker
+    label: Docker
   - id: javascript
     label: JavaScript
 githubUrl: https://github.com/Piioni/Pegasus-Medical-WebPage
 featured: true
-order: 2
+order: 3
 ---
 
-Built as an internship project, this app solved stock visibility issues across multiple hospitals.
+Web app built during an internship to centralize the tracking of medical supplies across several hospitals. It models the hospital hierarchy of hospitals, floors, warehouses and first-aid kits, and records every movement between them.
 
-Key outcomes:
+What it does:
 
-- Centralized updates for critical inventory
-- Role-based permissions for staff and admins
-- Dockerized stack for reproducible environments
+- Stock per warehouse and per kit, with transfers, entries and returns that go through pending, completed and cancelled states
+- Restock requests from a warehouse to a kit, confirmed or cancelled by a manager
+- Four roles, where hospital and floor managers only see the locations assigned to them
+- Plain PHP 8.2 with an MVC architecture and service and repository layers, running in Docker with MySQL

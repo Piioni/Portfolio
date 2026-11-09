@@ -1,9 +1,9 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Juan Rangel | Full Stack Developer',
-  description: 'Personal portfolio built with Nuxt, featuring projects, writing, and engineering experience.',
-  ogTitle: 'Juan Rangel | Full Stack Developer',
-  ogDescription: 'Personal portfolio built with Nuxt, featuring projects, writing, and engineering experience.',
+  title: 'Juan Rangel | Software Developer',
+  description: 'Software developer working on mobile and web products and on agent-driven workflows. Projects, writing and experience.',
+  ogTitle: 'Juan Rangel | Software Developer',
+  ogDescription: 'Software developer working on mobile and web products and on agent-driven workflows. Projects, writing and experience.',
   ogType: 'website',
 })
 </script>

@@ -15,11 +15,15 @@
           </h1>
 
           <p class="text-muted max-w-2xl leading-relaxed">
-            I am a full stack developer, I love coding and creating new things.
+            I am a software developer building mobile and web products, and the agent workflows I use to build them.
           </p>
 
           <p class="text-muted text-sm">
-            My main tech stack is
+            At Sipay I work with
+            <span class="font-medium text-accent-lavender-light dark:text-accent-lavender-dark">Flutter</span>
+            and
+            <span class="font-medium text-accent-lavender-light dark:text-accent-lavender-dark">Dart</span>.
+            On the web I use
             <span class="font-medium text-accent-lavender-light dark:text-accent-lavender-dark">Nuxt</span>,
             <span class="font-medium text-accent-lavender-light dark:text-accent-lavender-dark">TypeScript</span>
             and
@@ -27,14 +31,8 @@
           </p>
 
           <p class="text-muted text-sm">
-            I also work with
-            <span class="font-medium text-accent-lavender-light dark:text-accent-lavender-dark">React</span>
-            when the project needs it.
-          </p>
-
-          <p class="text-muted text-sm">
-            I enjoy Docker and DevOps practices, always looking for ways to improve deployment workflows and CI/CD
-            pipelines.
+            I design the workflows I use to build with AI agents: planned tasks, scoped workers, independent
+            verification and risk-based review.
           </p>
 
           <p class="text-muted text-sm">

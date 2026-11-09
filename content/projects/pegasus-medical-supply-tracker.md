@@ -11,7 +11,7 @@ technologies:
     label: Docker
   - id: javascript
     label: JavaScript
-githubUrl: https://github.com/Piioni/Pegasus-Medical-WebPage
+githubUrl: https://github.com/Piioni/pegasus-medical-stock
 featured: true
 order: 3
 ---
